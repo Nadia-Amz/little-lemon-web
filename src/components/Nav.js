@@ -1,8 +1,10 @@
 import React from "react";
+import '../components/css/Style.css';
+
 
 const Nav =() =>{
     return(
-        <section>
+        <section className="navigation">
     <ul>
         <li>
             <a href="#home">Home</a>

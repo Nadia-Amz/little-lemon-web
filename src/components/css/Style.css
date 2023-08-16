@@ -1,0 +1,81 @@
+.logo1 {
+    height: 3rem;
+    width: 9rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.navigation {
+    display: flex;
+    flex: repeat(3,1fr);
+    background-color: bisque;
+    justify-content: center;
+    margin-top: -3.4rem;
+}
+
+.navigation li a{
+   color: black;
+}
+
+.logo2{
+    height: 3rem;
+    width: 9rem;
+    margin-top: 0.3rem;
+    margin-left: 2rem;
+}
+
+.footer{
+    display: flex;
+    flex: repeat(3,1fr);
+    justify-content: space-between;
+    margin-top: 50%;
+    margin-right: 1rem;
+}
+
+.main{
+    background-color: rgb(49, 63, 57);
+    display: flex;
+    flex: repeat(2,1fr);
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.text{
+    display: flex;
+    flex: 1fr;
+    flex-direction: column;
+    justify-content: center;
+    background-color:beige;
+    margin-top: 3rem;
+    margin-left: 7rem;
+
+}
+
+.text button{
+    width: 8rem;
+    height: 2rem;
+    margin-left: 2rem;
+    background-color: rgba(227, 227, 36, 0.963);
+    border-radius: 16px;
+}
+
+.main h1{
+    color: rgba(227, 227, 36, 0.963);
+    font-family: Georgia, serif; 
+}
+
+.main h2{
+    color:white;
+}
+
+.main p{
+    color: white;
+    font-family: Georgia, serif;
+    font-size: larger;
+}
+
+.headerImage{
+    margin-right: 2rem;
+    margin-top: 2rem;
+    border-radius: 16px;
+}
