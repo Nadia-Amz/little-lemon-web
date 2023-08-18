@@ -3,6 +3,8 @@ import ImageHeader from "../images/ImageHeader.jpg";
 import salade from "../images/salade.jpg";
 import brushetta from "../images/brushetta.jpg";
 import lemonDessert from "../images/lemonDessert.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBicycle } from '@fortawesome/free-solid-svg-icons'
 
 const Main = () => {
     return (
@@ -27,6 +29,7 @@ const Main = () => {
                 peppers, olives and our Chicago style feta cheese, 
                 garnished with crunchy garlic and rosemary croutons. </p>
                 <a href="#order">Order a delivery</a>
+                <FontAwesomeIcon className="icon1" icon={faBicycle} />
                 </card>
                 <card className="card2">
                 <img src={brushetta} alt=""></img>
@@ -36,6 +39,7 @@ const Main = () => {
                 Toppings of tomato, veggies, beans, cured pork, or cheese are examples of variations.
                  In Italy,a brustolina grill is frequently used to create bruschetta. </p>
                 <a href="#order">Order a delivery</a>
+                <FontAwesomeIcon className="icon2" icon={faBicycle} />
                 </card>
                 <card className="card3">
                 <img src={lemonDessert} alt=""></img>
@@ -45,6 +49,7 @@ const Main = () => {
                 consectetur adipiscing elit. 
                 Aliquam sed cursus. </p>
                 <a href="#order">Order a delivery</a>
+                <FontAwesomeIcon className="icon3"icon={faBicycle} />
                 </card>
             </section>
         </section>
