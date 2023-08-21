@@ -3,8 +3,15 @@ import ImageHeader from "../images/ImageHeader.jpg";
 import salade from "../images/salade.jpg";
 import brushetta from "../images/brushetta.jpg";
 import lemonDessert from "../images/lemonDessert.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBicycle } from '@fortawesome/free-solid-svg-icons'
+import lolita from "../images/lolita.jpg";
+import carlos from "../images/carlos.jpg";
+import karim from "../images/karim.jpg";
+import chef  from "../images/chef B.jpg";
+import Mario from "../images/Mario and Adrian b.jpg";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBicycle } from '@fortawesome/free-solid-svg-icons';
+import {faStar} from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
     return (
@@ -51,6 +58,53 @@ const Main = () => {
                 <a href="#order">Order a delivery</a>
                 <FontAwesomeIcon className="icon3"icon={faBicycle} />
                 </card>
+            </section>
+            <section className="rating">
+                <card className="pers1">
+                    <section className="stars">
+                <FontAwesomeIcon className="star1" icon={faStar} /> 
+                <FontAwesomeIcon className="star1-2" icon={faStar} /> 
+                <FontAwesomeIcon className="star1-3" icon={faStar} /> 
+                <FontAwesomeIcon className="star1-4" icon={faStar} /> 
+                <FontAwesomeIcon className="star1-5" icon={faStar} /> 
+                </section>
+               <img src={lolita} alt=""></img>
+                <h3>Lolita</h3>
+                </card>
+                <card className="pers2">
+                    <section className="stars2">
+                <FontAwesomeIcon className="star2" icon={faStar} />
+                <FontAwesomeIcon className="star2-2" icon={faStar} /> 
+                <FontAwesomeIcon className="star2-3" icon={faStar} /> 
+                <FontAwesomeIcon className="star2-4" icon={faStar} /> 
+                <FontAwesomeIcon className="star2-5" icon={faStar} /> 
+                </section>
+                <img src={carlos} alt=""></img>
+                <h3>Carlos</h3>
+                </card>
+                <card className="pers3">
+                    <section className="stars3">
+                <FontAwesomeIcon className="star3" icon={faStar} /> 
+                <FontAwesomeIcon className="star3-2" icon={faStar} /> 
+                <FontAwesomeIcon className="star3-3" icon={faStar} /> 
+                <FontAwesomeIcon className="star3-4" icon={faStar} /> 
+                <FontAwesomeIcon className="star3-5" icon={faStar} /> 
+                </section>
+                <img src={karim} alt=""></img>
+                <h3>karim</h3>
+                </card>
+            </section>
+            <section className="description">
+                <card className="describe">
+                <h1>Little Lemon</h1>
+                <h2>Chicago</h2>
+                <p>We are a family owned Mediterranean restaurant, 
+                    focused on traditional recipes served with a modern twist.</p>
+                    </card>
+                    <card className="photos">
+                    <img src={chef} alt=""></img>
+                    <img className="mario" src={Mario} alt=""></img>
+                    </card>
             </section>
         </section>
     );
