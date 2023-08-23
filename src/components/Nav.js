@@ -1,19 +1,38 @@
 import React from "react";
 import '../components/css/Style.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
     return (
-        <section className="navigation">
+        <nav className="navigation">
+            <FontAwesomeIcon className="bars" icon={faBars} />
+            <ul>
+                <li><a href="#home">Home</a>   </li>
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
-            <a href="#reservation">Reservation</a>
-            <a href="#orderonline">Order Online</a>
-            <a href="#login">Login</a>
+            </ul>
+            <ul>
+                <li>            <a href="#about">About</a>
+                </li>
+            </ul>
+            <ul>
+                <li>            <a href="#menu">Menu</a>
+                </li>
+            </ul>
+            <ul>
+                <li>            <a href="#reservation">Reservation</a>
+                </li>
+            </ul>
+            <ul>
+                <li>            <a href="#orderonline">Order Online</a>
+                </li>
+            </ul>
+            <ul>
+                <li>            <a href="#login">Login</a>
+                </li>
+            </ul>
 
-        </section>
+        </nav>
     );
 };
 export default Nav;

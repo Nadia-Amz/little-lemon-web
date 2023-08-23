@@ -1,3 +1,12 @@
+*{
+    padding: o;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
 .logo1 {
     height: 3rem;
     width: 9rem;
@@ -7,58 +16,66 @@
 
 .navigation {
     display: flex;
-    flex: repeat(3,1fr);
     justify-content: center;
     margin-top: -2.3rem;
     margin-bottom: 2rem;
+    margin-left: 10rem;
 }
 
 .navigation a{
    color: black;
    font-size: large;
-   font-family: Rubik;
+   font-family: 'Rubik';
    text-decoration: none;
+   list-style: none;
    margin-right: 1rem;
-   margin-left: 2rem;
+   margin-left: 0.5rem;
+}
+.navigation a:hover{
+    background-color:rgb(102, 121, 111);
+    border-radius: 16px;
+    transition: .5s;
+}
+.bars{
+   display: none;
 }
 
 .text{
     background-color: rgb(49, 63, 57);
     display: flex;
-    flex: repeat(2,1fr);
     flex-direction: column;
-    justify-content: space-between;
     height: 30rem;
 
 }
 
 .text button{
     width: 9rem;
+    height: 2rem;
     margin-left: 9rem;
     margin-top: 3rem;
     background-color: rgba(227, 227, 36, 0.963);
     border-radius: 16px;
-    font-family: rubik;
+    font-family: 'rubik';
     font-size: medium;
 
 }
 
 .text h1{
     color: rgba(227, 227, 36, 0.963);
-    font-family: Georgia, serif; 
+    font-family: 'Georgia'; 
     font-size: xx-large;
     margin-left: 9rem;
-    margin-bottom: -2rem;
-    margin-top: 9rem;
+    margin-bottom: -1.5rem;
+    margin-top: 7rem;
 
 }
 
 .text h2{
     color:white;
     margin-left: 9rem;
+    margin-top: 1rem;
     font-size: xx-large;
-    font-family: Georgia, serif; 
-
+    font-family: 'Georgia';
 
 }
 
@@ -67,70 +84,71 @@
     font-family: Georgia, serif;
     font-size: larger;
     margin-left: 9rem;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
 
 }
 
 .headerImage{
     margin-left: 70%;
-    margin-top: -17rem;
+    margin-top: -26rem;
     border-radius: 16px;
-    width:20%;
+    width:350px;
 }
 
 .specials{
     display: flex;
-    flex:repeat(2,1fr);
     justify-content: space-between;
 }
 .specials p{
     margin-top: 7rem;
-    margin-left: 17rem;
+    margin-left: 9rem;
     font-size: x-large;
-    font-family: rubik;
+    font-family: 'rubik';
 }
 .specials button{
     margin-top: 7rem;
-    margin-right: 9.5rem;
+    margin-right: 4.5rem;
     width: 9rem;
     height: 2rem;
     border-radius: 16px;
     background-color: rgba(227, 227, 36, 0.963);
-    font-family: rubik;
+    font-family: 'rubik';
 }
 .menu{
     display: flex;
-    flex: repeat(3,1fr);
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 2rem;
-    margin-right: 9.5rem;
-    margin-left: 17rem;
+    margin-right: 4rem;
+    margin-left: 9rem;
 }
 .card1{
     background-color: rgb(236, 236, 236);
     display: flex;
+    flex: 1;
     flex-direction: column;
     border-radius: 16px;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 .card1 img{
-    width:20.7rem;
+    width: 27rem;
     height: 12rem;
     border-radius: 16px;
 }
 .card1 h2{
-    margin-left:1rem ;
-    font-family: Raleway;
+    margin-left: 1rem ;
+    margin-top: 1rem;
+    font-family: 'Raleway';
 }
 .card1 h3{
-    margin-top: -2.9rem;
-    margin-left: 15rem;
+    margin-top: -1.5rem;
+    margin-left: 22rem;
     font-size: medium;
     color: orange;
 }
 .card1 p{
     margin-left: 1rem;
+    margin-top: 3rem;
     color: grey;
 
 }
@@ -139,7 +157,7 @@
     margin-top: 5rem;
     text-decoration: none;
     color: black;
-    font-family: Rubik;
+    font-family: 'Rubik';
     font-size: large;
 }
 .icon1{
@@ -152,38 +170,41 @@
 .card2{
     background-color: rgb(236, 236, 236);
     display: flex;
+    flex: 1;
     flex-direction: column;
     border-radius: 16px;
-    margin-right: 2rem;
+    margin-right: 1rem;
 
 }
 .card2 img{
-    width:20.7rem;
+    width: 27rem;
     height: 12rem;
     border-radius: 16px;
 }
 .card2 h2{
     margin-left:1rem ;
-    font-family: Raleway;
+    margin-top: 1rem;
+    font-family: 'Raleway';
 }
 .card2 p{
     margin-left: 1rem;
+    margin-top: 3rem;
     color: grey;
 
 }
 .card2 h3{
-    margin-top: -2.9rem;
-    margin-left: 15rem;
+    margin-top: -1.5rem;
+    margin-left: 22rem;
     font-size: medium;
     color: orange;
 }
 .card2 a{
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     margin-bottom: 2rem;
     text-decoration: none;
     color: black;
-    font-family: Rubik;
+    font-family: 'Rubik';
     font-size: large;
 }
 .icon2{
@@ -194,31 +215,34 @@
 .card3{
     background-color: rgb(236, 236, 236);
     display: flex;
+    flex: 1;
     flex-direction: column;
     border-radius: 16px;
 }
 .card3 img{
-    width:20.7rem;
+    width: 27rem;
     height: 12rem;
     border-radius: 16px;
 }
 .card3 h2{
     margin-left:1rem ;
-    font-family: Raleway;
+    margin-top: 1rem;
+    font-family: 'Raleway';
 }
 .card3 h3{
-    margin-top: -2.9rem;
-    margin-left: 15rem;
+    margin-top: -1.5rem;
+    margin-left: 22rem;
     font-size: medium;
     color: orange;
 }
 .card3 p{
     margin-left: 1rem;
+    margin-top: 3rem;
     color: grey;
 }
 .card3 a{
     margin-left: 1rem;
-    margin-top: 8rem;
+    margin-top: 6.5rem;
     text-decoration: none;
     color: black;
     font-family: Rubik;
@@ -233,7 +257,6 @@
 .rating{
     background-color: rgb(236, 236, 236);
     display: flex;
-    flex: repeat(3,1fr);
     flex-direction: row;
     justify-content: space-between;
     margin-top: 8rem;
@@ -256,6 +279,7 @@
     flex-direction: column;
     margin-right: 5rem;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .stars{
     margin-top: 1rem;
@@ -272,21 +296,25 @@
 
  .pers1 img{
     width: 15rem;
-   margin-top: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
  }
  .pers2 img{
     width: 15rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
+
  }
  .pers3 img{
     width: 15rem;
     margin-top:2rem ;
+    margin-bottom: 1rem;
  }
 
  .description{
     background-color: rgb(49, 63, 57);
     display: flex;
-    flex: repeat(2,1fr);
     flex-direction: row;
     justify-content: space-between;
     margin-top: 8rem;
@@ -298,33 +326,34 @@
 }
 .describe{
     margin-top: 8rem;
-    margin-left: 4rem;
+    margin-right: 6rem;
 }
 .photos{
     margin-top: 1rem;
+    margin-right: 2rem;
 }
 .describe h1{
     color: rgba(227, 227, 36, 0.963);
-    font-family: Georgia, serif; 
+    font-family: 'Georgia'; 
     font-size: xx-large;
-    margin-left: 9rem;
-    margin-bottom: -2rem;
+    margin-left: 8rem;
+    margin-bottom: -0.5rem;
     margin-top: 9rem;
 
 }
 .describe h2{
     color:white;
-    margin-left: 9rem;
+    margin-left: 8rem;
     font-size: xx-large;
-    font-family: Georgia, serif;
+    font-family: 'Georgia';
 }
 
 .describe p{
     color: white;
-    font-family: Georgia, serif;
+    font-family: 'Georgia';
     font-size: larger;
-    margin-left: 9rem;
-    margin-top: 0.5rem;
+    margin-left: 8rem;
+    margin-top: 1rem;
 
 }
 .mario{
@@ -335,10 +364,10 @@
 .footer{
     background-color: rgb(236, 236, 236);;
     display: flex;
-    flex: repeat(3,1fr);
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
+    height: 12rem;
 }
 .logo2{
     height: 3rem;
@@ -350,10 +379,8 @@
 
 .footer a{
     font-size: medium;
-    font-family: Rubik;
-    text-decoration: none;
+    font-family: 'Rubik';
     color: black;
-    margin-bottom: 0.8rem;
 
 }
 .about{
@@ -378,17 +405,22 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .navigation {
-        display: flex;
-        justify-content: center;
-        margin-top: -2.3rem;
-        margin-bottom: 2rem;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 65rem;
     }
     .navigation a{
-        color: black;
-        font-size: small;
-        font-family: Rubik;
-        text-decoration: none;
+        margin: 0.5rem 0;
+        margin-top: 1rem;
+     }
+     .navigation a:hover{
+        background-color:rgb(102, 121, 111);
+        border-radius: 16px;
+        transition: .5s;
+    }
+    .bars{
+        display: block;
      }
 }

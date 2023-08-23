@@ -15,20 +15,20 @@ import {faStar} from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
     return (
-        <section>
+        <main>
            <section className="text">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant,</p>
                     <p>focused on traditional recipes served with a modern twist.</p>
                 <button type="submit">Reserve a table</button>
-                <img className="headerImage" src={ImageHeader} alt=""></img>
             </section>
+            <img className="headerImage" src={ImageHeader} alt=""></img>
            <section className="specials">
             <p>This weeek specials !</p>
             <button type="submit">Online Menu</button></section>
             <section className="menu">
-                <card className="card1">
+                <article className="card1">
             <img src={salade} alt=""></img>
             <h2>Greek Salad </h2>
             <h3>$12.99</h3>
@@ -37,8 +37,8 @@ const Main = () => {
                 garnished with crunchy garlic and rosemary croutons. </p>
                 <a href="#order">Order a delivery</a>
                 <FontAwesomeIcon className="icon1" icon={faBicycle} />
-                </card>
-                <card className="card2">
+                </article>
+                <article className="card2">
                 <img src={brushetta} alt=""></img>
             <h2>Brushetta</h2>
             <h3>$7.99</h3>
@@ -47,8 +47,8 @@ const Main = () => {
                  In Italy,a brustolina grill is frequently used to create bruschetta. </p>
                 <a href="#order">Order a delivery</a>
                 <FontAwesomeIcon className="icon2" icon={faBicycle} />
-                </card>
-                <card className="card3">
+                </article>
+                <article className="card3">
                 <img src={lemonDessert} alt=""></img>
             <h2>Lemon dessert</h2>
             <h3>$5.00</h3>
@@ -57,10 +57,10 @@ const Main = () => {
                 Aliquam sed cursus. </p>
                 <a href="#order">Order a delivery</a>
                 <FontAwesomeIcon className="icon3"icon={faBicycle} />
-                </card>
+                </article>
             </section>
             <section className="rating">
-                <card className="pers1">
+                <section className="pers1">
                     <section className="stars">
                 <FontAwesomeIcon className="star1" icon={faStar} /> 
                 <FontAwesomeIcon className="star1-2" icon={faStar} /> 
@@ -70,8 +70,8 @@ const Main = () => {
                 </section>
                <img src={lolita} alt=""></img>
                 <h3>Lolita</h3>
-                </card>
-                <card className="pers2">
+                </section>
+                <section className="pers2">
                     <section className="stars2">
                 <FontAwesomeIcon className="star2" icon={faStar} />
                 <FontAwesomeIcon className="star2-2" icon={faStar} /> 
@@ -81,8 +81,8 @@ const Main = () => {
                 </section>
                 <img src={carlos} alt=""></img>
                 <h3>Carlos</h3>
-                </card>
-                <card className="pers3">
+                </section>
+                <section className="pers3">
                     <section className="stars3">
                 <FontAwesomeIcon className="star3" icon={faStar} /> 
                 <FontAwesomeIcon className="star3-2" icon={faStar} /> 
@@ -92,21 +92,21 @@ const Main = () => {
                 </section>
                 <img src={karim} alt=""></img>
                 <h3>karim</h3>
-                </card>
+                </section>
             </section>
             <section className="description">
-                <card className="describe">
+                <article className="describe">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant, 
                     focused on traditional recipes served with a modern twist.</p>
-                    </card>
-                    <card className="photos">
+                    </article>
+                    <article className="photos">
                     <img src={chef} alt=""></img>
                     <img className="mario" src={Mario} alt=""></img>
-                    </card>
+                    </article>
             </section>
-        </section>
+        </main>
     );
 };
 

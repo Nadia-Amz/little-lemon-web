@@ -4,34 +4,56 @@ import '../components/css/Style.css';
 
 const Footer = () => {
     return (
-        <section className="footer">
+        <footer className="footer">
             <img className="logo2" src={logo} alt=""></img>
             <section className="about">
-
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#menu">Menu</a>
-                <a href="#reservation">Reservation</a>
-                <a href="#orderonline">Order Online</a>
-                <a href="#login">Login</a>
+                <ul>
+                    <li>                <a href="#home">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>                <a href="#about">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>                <a href="#menu">Menu</a>
+                    </li>
+                </ul>
+                <ul><li>                <a href="#reservation">Reservation</a>
+                </li></ul>
+                <ul>
+                    <li>                <a href="#orderonline">Order Online</a>
+                    </li>
+                </ul><ul>
+                    <li>                <a href="#login">Login</a>
+                    </li>
+                </ul>
 
             </section>
             <section className="about1">
+                <ul><li>                <a href="#address">Address</a>
+                </li></ul>
+                <ul><li>                <a href="#phonenumber">Phone Number</a>
+                </li></ul>
+                <ul><li>                <a href="#email">Email</a>
+                </li></ul>
 
-                <a href="#address">Address</a>
-
-                <a href="#phonenumber">Phone Number</a>
-
-                <a href="#email">Email</a>
 
             </section>
             <section className="about2">
-                                <a href="#facebook">Facebook</a>
-                           
-                                            <a href="#instagram">Instagram</a>
+                <ul>
+                    <li>
+                        <a href="#facebook">Facebook</a>
+
+                    </li>
+                </ul>
+                <ul>
+                    <li>                <a href="#instagram">Instagram</a>
+                    </li>
+                </ul>
 
             </section>
-        </section>
+        </footer>
 
     );
 };
