@@ -82,9 +82,10 @@
 .text p{
     color: white;
     font-family: Georgia, serif;
-    font-size: larger;
+    font-size: x-large;
     margin-left: 9rem;
     margin-top: 2rem;
+    width: 550px;
 
 }
 
@@ -406,21 +407,428 @@
 }
 
 @media (max-width: 600px) {
+
+    .logo1 {
+        height: 2rem;
+        width: 6rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
     .navigation {
         flex-direction: column;
         align-items: center;
-        margin-left: 65rem;
+        margin-left: 10rem;
     }
+    
     .navigation a{
+        color: white;
         margin: 0.5rem 0;
         margin-top: 1rem;
+        display: none;
+      
      }
      .navigation a:hover{
-        background-color:rgb(102, 121, 111);
+        background-color:rgba(227, 227, 36, 0.963);
         border-radius: 16px;
         transition: .5s;
     }
     .bars{
         display: block;
+        font-size: larger;
+        margin-left: 7rem;
+        margin-top: 0.5rem;
      }
+     .text{
+        background-color: rgb(49, 63, 57);
+        display: flex;
+        flex-direction: column;
+        height: 15rem;
+        width: 24rem;
+    
+    }
+    .headerImage{
+        margin-left: 50%;
+        margin-bottom: -1rem;
+        border-radius: 16px;
+        width:145px;
+    }
+    .text h1{
+        color: rgba(227, 227, 36, 0.963);
+        font-family: 'Georgia'; 
+        font-size: larger;
+        margin-left: 2rem;
+        margin-bottom: -3rem;
+        margin-top: 2rem;
+    
+    }
+    
+    .text h2{
+        color:white;
+        margin-left: 2rem;
+        margin-top: 2.7rem;
+        font-size: larger;
+        font-family: 'Georgia';
+    
+    }
+    
+    .text p{
+        color: white;
+        font-family: 'Georgia,serif';
+        font-size: x-small;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        width: 190px;
+    
+    }
+    .text button{
+        width: 6rem;
+        height: 1.5rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        background-color: rgba(227, 227, 36, 0.963);
+        border-radius: 16px;
+        font-family: 'rubik';
+        font-size: x-small;
+        font-weight: bold;
+    
+    }
+    .specials{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .specials p{
+        margin-top: 3rem;
+        margin-left: 1rem;
+        font-size: medium;
+        font-family: 'rubik';
+        font-weight: bold;
+    }
+    .specials button{
+        margin-top: 3rem;
+        margin-right: 5rem;
+        width: 6rem;
+        height: 1.5rem;
+        border-radius: 16px;
+        background-color: rgba(227, 227, 36, 0.963);
+        font-family: 'rubik';
+        font-size: x-small;
+        font-weight: bold;
+
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 0.2rem;
+        width: 24rem;
+
+    }
+    .card1{
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        margin-right: 0.5rem;
+        width: 7rem;
+    }
+    .card1 img{
+        width: 7.5rem;
+        height: 6rem;
+        border-radius: 16px;
+    }
+    .card1 h2{
+        margin-left: 0.3rem;
+        margin-top: 0.5rem;
+        font-family: 'Raleway';
+        font-size: small;
+       
+    }
+    .card1 h3{
+        margin-top: -0.8rem;
+        margin-left: 5.5rem;
+        font-size: xx-small;
+        color: orange;
+    }
+    .card1 p{
+        margin-left: 0.3rem;
+        margin-top: 1rem;
+        color: grey;
+        font-size: x-small;
+    
+    }
+    .card1 a{
+        margin-left: 0.2rem;
+        margin-top: 4.5rem;
+        text-decoration: none;
+        color: black;
+        font-family: 'Rubik';
+        font-size: small;
+    }
+    .icon1{
+        margin-left: 6.3rem;
+        margin-top: -0.7rem;
+        margin-bottom: 1.5rem;
+        font-size: x-small;
+     }
+    
+    .card2{
+        background-color: rgb(236, 236, 236);
+        display: flex;
+      
+        flex-direction: column;
+        border-radius: 16px;
+        margin-right: 0.5rem;
+        width: 7rem;
+
+    
+    }
+    .card2 img{
+        width: 7.5rem;
+        height: 6rem;
+        border-radius: 16px;
+    }
+    .card2 h2{
+        margin-left: 0.3rem;
+        margin-top: 0.5rem;
+        font-family: 'Raleway';
+        font-size: small;
+    }
+    .card2 p{
+        margin-left: 0.3rem;
+        margin-top: 1rem;
+        color: grey;
+        font-size: x-small;
+    
+    }
+    .card2 h3{
+        margin-top: -0.8rem;
+        margin-left: 5.5rem;
+        font-size: xx-small;
+        color: orange;
+    }
+    .card2 a{
+        margin-left: 0.3rem;
+        margin-top: 0.5rem;
+        text-decoration: none;
+        color: black;
+        font-family: 'Rubik';
+        font-size: small;
+    }
+    .icon2{
+        margin-left: 6.3rem;
+        margin-top: -2.7rem;
+        margin-bottom: 1.5rem;
+        font-size: x-small;
+     }
+    .card3{
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        width: 7rem;
+        margin-right: 0.5rem;
+
+
+    }
+    .card3 img{
+        width: 7.5rem;
+        height: 6rem;
+        border-radius: 16px;
+    }
+    .card3 h2{
+        margin-left: 0.3rem;
+        margin-top: 0.5rem;
+        font-family: 'Raleway';
+        font-size: small;
+    }
+    .card3 h3{
+        margin-top: -0.8rem;
+        margin-left: 6.5rem;
+        font-size: xx-small;
+        color: orange;
+    }
+    .card3 p{
+        margin-left: 0.3rem;
+        margin-top: 1rem;
+        color: grey;
+        font-size: x-small;
+    }
+    .card3 a{
+        margin-left: 0.3rem;
+        margin-top: 7rem;
+        text-decoration: none;
+        color: black;
+        font-family: 'Rubik';
+        font-size: small;
+    }
+    .icon3{
+        margin-left: 6.3rem;
+        margin-top: -0.7rem;
+        margin-bottom: 1.5rem;
+        font-size: x-small;
+     }
+     .rating{
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3rem;
+        width: 24rem;
+     }
+    
+     .pers1{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.7rem;
+        align-items: center;
+    }
+    .pers2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.7rem;
+        align-items: center;
+    }
+    .pers3{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.7rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .stars{
+        font-size: small;
+        margin-top: 0.5rem;
+        color: rgba(227, 227, 36, 0.963);
+    }
+    .stars2{
+        font-size: small;
+        margin-top: 0.5rem;
+        color: rgba(227, 227, 36, 0.963);
+    }
+    .stars3{
+        font-size: small;
+        margin-top: 0.5rem;
+        color: rgba(227, 227, 36, 0.963);
+    }
+    
+     .pers1 img{
+        width: 7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    
+     }
+     .pers2 img{
+        width: 7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    
+     }
+     .pers3 img{
+        width: 7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+     }
+     .rating h3{
+        font-size: small;
+        font-family: 'relway';
+     }
+
+     .description{
+        background-color: rgb(49, 63, 57);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3rem;
+        width: 24rem;
+     }
+     .description img{
+        width: 7rem;
+        height: 10rem;
+        border-radius: 16px;
+    }
+    .describe{
+        margin-top: 1rem;
+        margin-right: 2rem;
+        margin-left: -6rem;
+    }
+    .photos{
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .describe h1{
+        color: rgba(227, 227, 36, 0.963);
+        font-family: 'Georgia'; 
+        font-size: medium;
+        margin-left: 7rem;
+        margin-bottom: -0.2rem;
+        margin-top: 3rem;
+    
+    }
+    .describe h2{
+        color:white;
+        margin-left: 7rem;
+        font-size: medium;
+        font-family: 'Georgia';
+    }
+    
+    .describe p{
+        color: white;
+        font-family: 'Georgia';
+        font-size: small;
+        margin-left: 7rem;
+        margin-top: 1rem;
+    
+    }
+    .mario{
+       margin-top: -6rem;
+       margin-left: 4rem;
+       margin-bottom: 0.5rem;
+    }
+
+    .footer{
+        background-color: rgb(236, 236, 236);;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
+        height: 11rem;
+        width: 24rem;
+    }
+    .logo2{
+        height: 1rem;
+        width: 5rem;
+        margin-top: 0.3rem;
+        margin-left: 0.2rem;
+       
+    }
+    
+    .footer a{
+        font-size: x-small;
+        font-family: 'Rubik';
+        color: black;
+    
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.6rem;
+        margin-right: 1rem;
+    
+    }
+    .about1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+        margin-right: 1rem;
+    
+    }
+    .about2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.8rem;
+        margin-right: 2rem;
+    
+    }
 }

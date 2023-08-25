@@ -19,8 +19,8 @@ const Main = () => {
            <section className="text">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
-                <p>We are a family owned Mediterranean restaurant,</p>
-                    <p>focused on traditional recipes served with a modern twist.</p>
+                <p>We are a family owned Mediterranean restaurant,
+            focused on traditional recipes served with a modern twist.</p>
                 <button type="submit">Reserve a table</button>
             </section>
             <img className="headerImage" src={ImageHeader} alt=""></img>
@@ -51,7 +51,7 @@ const Main = () => {
                 <article className="card3">
                 <img src={lemonDessert} alt=""></img>
             <h2>Lemon dessert</h2>
-            <h3>$5.00</h3>
+            <h3>$5</h3>
             <p>Lorem ipsum dolor sit amet, 
                 consectetur adipiscing elit. 
                 Aliquam sed cursus. </p>
