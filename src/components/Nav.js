@@ -6,6 +6,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Nav = () => {
     return (
         <nav className="navigation">
+            <FontAwesomeIcon className="bars" icon={faBars} />
+            
             <ul>
                 <li><a href="#home">Home</a> 
                 </li>
@@ -30,7 +32,6 @@ const Nav = () => {
                 <li> <a href="#login">Login</a>
                 </li>
             </ul>
-            <FontAwesomeIcon className="bars" icon={faBars} />
 
         </nav>
     );
