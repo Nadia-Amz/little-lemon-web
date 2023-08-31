@@ -19,6 +19,7 @@
 }
 
 .navigation {
+    background-color: aqua;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -27,7 +28,7 @@
 }
 
 a:hover{
-    text-decoration: underline rgb(102, 121, 111);
+    text-decoration: underline rgb(93, 157, 124);
     transition: .5s;
 }
 .bars{
@@ -94,7 +95,7 @@ a:hover{
     justify-content: space-between;
     flex-direction: row;
     margin-right: 2rem;
-    margin-left: 9rem;
+    margin-left: 2rem;
     margin-top: 7rem;
 
 }
@@ -115,7 +116,7 @@ a:hover{
     justify-content: center;
     margin-top: 2rem;
     margin-right: 2rem;
-    margin-left: 9rem;
+    margin-left: 2rem;
 }
 .container1{
     display: flex;
@@ -147,7 +148,7 @@ a:hover{
     margin-right: 1rem;
 }
 .card1 img{
-    height: 12rem;
+    height: 10rem;
     border-radius: 16px;
 }
 .card1 h2{
@@ -186,7 +187,6 @@ a:hover{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3rem;
-
 }
 .card2{
     background-color: rgb(236, 236, 236);
@@ -198,7 +198,7 @@ a:hover{
 
 }
 .card2 img{
-    height: 12rem;
+    height: 10rem;
     border-radius: 16px;
 }
 .card2 h2{
@@ -247,7 +247,7 @@ a:hover{
     border-radius: 16px;
 }
 .card3 img{
-    height: 12rem;
+    height: 10rem;
     border-radius: 16px;
 }
 .card3 h2{
@@ -270,27 +270,36 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 8rem;
- }
+    margin-top: 7rem;
+}
 
- .pers1{
+.pers1{
     display: flex;
+    flex: 1 ;
     flex-direction: column;
-    margin-left: 5rem;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 .pers2{
     display: flex;
+    flex: 1 ;
     flex-direction: column;
-    margin-left: 5rem;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+
 }
 .pers3{
     display: flex;
+    flex: 1 ;
     flex-direction: column;
-    margin-right: 5rem;
     align-items: center;
-    margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+
+
 }
 .stars{
     margin-top: 1rem;
@@ -306,21 +315,23 @@ a:hover{
 }
 
  .pers1 img{
-    width: 15rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-
+   max-width: 70%;
+   height: auto;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
  }
  .pers2 img{
-    width: 15rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    max-width: 70%;
+    height: auto;
 
  }
  .pers3 img{
-    width: 15rem;
-    margin-top:2rem ;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    max-width: 70%;
+    height: auto;
  }
 
  .description{
@@ -328,33 +339,52 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 8rem;
+    margin-top: 7rem;
  }
+
+ .describe{
+    
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;   
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.photos{
+    
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
  .description img{
-    width: 20rem;
-    height: 25rem;
+    max-width: 50%;
+    height: auto;
     border-radius: 16px;
 }
-.describe{
-    margin-top: 8rem;
-    margin-right: 6rem;
+
+.mario{
+margin-top: -3rem;
+margin-left: 10rem;
 }
-.photos{
-    margin-top: 1rem;
-    margin-right: 2rem;
-}
+
+
 .describe h1{
     color: rgba(227, 227, 36, 0.963);
     font-family: 'Georgia'; 
     font-size: xx-large;
-    margin-left: 8rem;
+    margin-left: 1rem;
     margin-bottom: -0.5rem;
-    margin-top: 9rem;
+    margin-top: 2rem;
 
 }
 .describe h2{
     color:white;
-    margin-left: 8rem;
+    margin-left: 1rem;
     font-size: xx-large;
     font-family: 'Georgia';
 }
@@ -363,60 +393,81 @@ a:hover{
     color: white;
     font-family: 'Georgia';
     font-size: larger;
-    margin-left: 8rem;
-    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+   
 
 }
-.mario{
-   margin-top: -7rem;
-   margin-left: 10rem;
-   margin-bottom: 1rem;
-}
+
 .footer{
-    background-color: rgb(236, 236, 236);;
+    background-color: rgb(236, 236, 236);
     display: flex;
-    justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    height: 12rem;
 }
 .logo2{
-    height: 3rem;
+    height: 2rem;
     width: 9rem;
     margin-top: 0.3rem;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
    
 }
-
 .footer a{
+    color: rgb(97, 101, 105);
     font-size: medium;
-    font-family: 'Rubik';
-    color: black;
-
 }
+
 .about{
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-right: 12rem;
-
+    flex: 1;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 .about1{
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-right: 12rem;
-
+    flex: 1;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 .about2{
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-right: 8rem;
-
+    flex: 1;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width:992px) {
+    .navigation{
+        margin-left: 10rem;
+    }
+}
+@media (max-width:768px){
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 2rem;
+    }
+    ul{
+        background-color: antiquewhite;
+        width: 100%;
+        text-align: center;
+    }
+   
+   .bars{
+        display: block;
+        margin-left: 33rem;
+
+    }
+}
+
+/*@media (max-width: 600px) {
 
     .logo1 {
         height: 2rem;
@@ -854,4 +905,4 @@ a:hover{
         margin-right: 2rem;
     
     }
-}
+}*/

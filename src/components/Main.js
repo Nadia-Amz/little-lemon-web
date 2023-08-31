@@ -123,7 +123,7 @@ const Main = () => {
                     focused on traditional recipes served with a modern twist.</p>
                     </article>
                     <article className="photos">
-                    <img src={chef} alt=""></img>
+                    <img className="chef" src={chef} alt=""></img>
                     <img className="mario" src={Mario} alt=""></img>
                     </article>
             </section>
