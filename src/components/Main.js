@@ -32,56 +32,64 @@ const Main = () => {
             <button type="submit">Online Menu</button></section>
 
             <section className="menu">
-                <article className="card1">
-                <img src={salade} alt=""></img>
-
-                <div className="container1">
-            <div className="titreEtPrix">
-            <h2>Greek Salad </h2>
-            <h3>$12.99</h3>
-            </div>
-            <p>The famous greek salad of crispy lettuce, 
-                peppers, olives and our Chicago style feta cheese, 
-                garnished with crunchy garlic and rosemary croutons. </p>
+                <article className="card">
+                    <img src={salade} alt=""></img>
+                
+                <div className="container">
+                    <div className="card-content">
+                        <div className="titreEtPrix">
+                            <h2>Greek Salad </h2>
+                            <h3>$12.99</h3>
+                        </div>
+                        <p>
+                            The famous greek salad of crispy lettuce, 
+                            peppers, olives and our Chicago style feta cheese, 
+                            garnished with crunchy garlic and rosemary croutons.
+                        </p>                      
+                    </div>  
                 <div className="order">
                 <a href="#order">Order a delivery</a>
-                <FontAwesomeIcon className="icon1" icon={faBicycle} />
+                <FontAwesomeIcon className="icon" icon={faBicycle} />
                 </div>
                 </div>
                 </article>
                 
-                <article className="card2">
-                <img src={brushetta} alt=""></img>
-                <div className="container2">
-            <div className="titreEtPrix1">
-            <h2>Brushetta</h2>
-            <h3>$7.99</h3></div>
-            <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. 
-                Toppings of tomato, veggies, beans, cured pork. </p>
-                 <div className="order1">
+                <article className="card">
+                    <img src={brushetta} alt=""></img>
+                <div className="container">
+                    <div className="card-content">
+                        <div className="titreEtPrix">
+                        <h2>Brushetta</h2>
+                        <h3>$7.99</h3></div>
+                        <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. 
+                            Toppings of tomato, veggies, beans, cured pork. </p>
+                    </div>
+                 <div className="order">
                 <a href="#order">Order a delivery</a>
-                <FontAwesomeIcon className="icon2" icon={faBicycle} />
+                <FontAwesomeIcon className="icon" icon={faBicycle} />
                 </div>
                 </div>
                 </article>
-                <article className="card3">
+                <article className="card">
                 <img src={lemonDessert} alt=""></img>
-                <div className="container3">
-            <div className="titreEtPrix2">
-            <h2>Lemon dessert</h2>
-            <h3>$5</h3></div>
-            <p>Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. 
-                Aliquam sed cursus,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, </p>
-                <div className="order2">
+                <div className="container">
+                    <div className="card-content">
+                        <div className="titreEtPrix">
+                        <h2>Lemon dessert</h2>
+                        <h3>$5</h3></div>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Aliquam sed cursus,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, </p>
+                    </div>
+                <div className="order">
                 <a href="#order">Order a delivery</a>
-                <FontAwesomeIcon className="icon3"icon={faBicycle} />
+                <FontAwesomeIcon className="icon"icon={faBicycle} />
                 </div>
                 </div>
                 </article>
             </section>
             <section className="rating">
-                <section className="pers1">
+                <section className="pers">
                     <section className="stars">
                 <FontAwesomeIcon className="star1" icon={faStar} /> 
                 <FontAwesomeIcon className="star1-2" icon={faStar} /> 
@@ -92,8 +100,8 @@ const Main = () => {
                <img src={lolita} alt=""></img>
                 <h3>Lolita</h3>
                 </section>
-                <section className="pers2">
-                    <section className="stars2">
+                <section className="pers">
+                    <section className="stars">
                 <FontAwesomeIcon className="star2" icon={faStar} />
                 <FontAwesomeIcon className="star2-2" icon={faStar} /> 
                 <FontAwesomeIcon className="star2-3" icon={faStar} /> 
@@ -103,8 +111,8 @@ const Main = () => {
                 <img src={carlos} alt=""></img>
                 <h3>Carlos</h3>
                 </section>
-                <section className="pers3">
-                    <section className="stars3">
+                <section className="pers">
+                    <section className="stars">
                 <FontAwesomeIcon className="star3" icon={faStar} /> 
                 <FontAwesomeIcon className="star3-2" icon={faStar} /> 
                 <FontAwesomeIcon className="star3-3" icon={faStar} /> 
