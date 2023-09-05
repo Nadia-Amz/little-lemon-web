@@ -5,16 +5,26 @@
     list-style: none;
     box-sizing: border-box;
 }
+
  a {
     color: black;
     font-size: large;
     font-family: 'Rubik';
  }
 
+    /*HEADER*/
+
+.header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .logo1 {
     height: 3rem;
     width: 9rem;
-    margin-top: 2rem;
     margin-left: 2rem;
 }
 
@@ -22,33 +32,34 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: -2.3rem;
-    margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline rgb(93, 157, 124);
     transition: .5s;
 }
-.bars{
+.bars {
    display: none;
 }
 
-.text{
+ /*reserve table button*/
+
+.text {
     background-color: rgb(49, 63, 57);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
  
 }
-.paragraph{
+.paragraph {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
     margin-top: 7rem;
 }
 
-.text button{
+.text button {
     width: 9rem;
     height: 2rem;
     margin-top: 2rem;
@@ -56,10 +67,9 @@ a:hover{
     border-radius: 16px;
     font-family: 'rubik';
     font-size: medium;
-    font-weight: bold;
 }
 
-.text h1{
+.text h1 {
     color: rgba(227, 227, 36, 0.963);
     font-family: 'Georgia'; 
     font-size:xx-large;
@@ -67,7 +77,7 @@ a:hover{
 
 }
 
-.text h2{
+.text h2 {
     color:white;
     margin-top: 1rem;
     font-size: xx-large;
@@ -75,21 +85,25 @@ a:hover{
 
 }
 
-.text p{
+.text p {
     color: white;
-    font-family: Georgia, serif;
+    font-family: 'Georgia';
     font-size: x-large;
     margin-top: 1rem;
+    margin-right: 5rem;
+    line-height: 3rem;
 }
 
-.headerImage{
+.headerImage {
     border-radius: 16px;
     margin-top: 2rem;
     margin-right: 2rem;
     margin-bottom: -3rem;
 }
 
-.specials{
+  /*specials and button*/
+
+.specials {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -98,18 +112,21 @@ a:hover{
     margin-top: 7rem;
 
 }
-.specials p{
+.specials p {
     font-size: x-large;
     font-family: 'rubik';
 }
-.specials button{
+.specials button {
     width: 9rem;
     height: 2rem;
     border-radius: 16px;
     background-color: rgba(227, 227, 36, 0.963);
     font-family: 'rubik';
 }
-.menu{
+
+  /*MENU*/
+
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -131,21 +148,21 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
-.titreEtPrix{
+.titreEtPrix {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0.5rem;
     
 }
-.order{
+.order {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3rem;
 
 }
-.card{
+.card {
     background-color: rgb(236, 236, 236);
     display: flex;
     flex: 1;
@@ -154,134 +171,38 @@ a:hover{
     margin-right: 1rem;
 }
 
-.card img{
+.card img {
     height: 10rem;
     width: 100%;
     object-fit: fill;
     border-radius: 16px; 
 }
-.card h2{
+.card h2 {
     font-family: 'Raleway';
 }
-.card h3{
+.card h3 {
     font-size: medium;
     color: orange;
 }
-.card p{
+.card p {
     color: grey;
 
 }
-.icon{
+.icon {
     font-size: larger;
  }
 
- /*.container2{
+     /*rating section*/
+
+.rating {
+    background-color: rgb(236, 236, 236);
     display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 2rem;
-    margin-bottom: 0.5rem;
-
-}
-.titreEtPrix1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.order1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 3rem;
-}
-.card2{
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    border-radius: 16px;
-    margin-right: 1rem;
-
-}
-.card2 img{
-    height: 10rem;
-    border-radius: 16px;
-}
-.card2 h2{
-    font-family: 'Raleway';
-}
-.card2 p{
-    margin-top: 1rem;
-    color: grey;
-
-}
-.card2 h3{
-    font-size: medium;
-    color: orange;
-}
-.icon2{
-    font-size: larger;
- }
-
- .container3{
-    display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-
-}
-.titreEtPrix2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.order2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 3rem;
-
-}
-.card3{
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    border-radius: 16px;
-}
-.card3 img{
-    height: 10rem;
-    border-radius: 16px;
-}
-.card3 h2{
-    font-family: 'Raleway';
-}
-.card3 h3{
-    font-size: medium;
-    color: orange;
-}
-.card3 p{
-    margin-top: 1rem;
-    color: grey;
-}
-.icon3{
-    font-size: larger;
- }*/
-
-.rating{
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 7rem;
 }
 
-.pers{
+.pers {
     display: flex;
     flex: 1 ;
     flex-direction: column;
@@ -290,36 +211,39 @@ a:hover{
     margin-bottom: 0.5rem;
 }
 
-.stars{
+.stars {
     margin-top: 1rem;
     color: rgba(227, 227, 36, 0.963);
 }
 
- .pers img{
+ .pers img {
    max-width: 60%;
    height: auto;
    margin-top: 1rem;
    margin-bottom: 1rem;
  }
 
- .description{
+ /*DESCRIPTION OF THE RESTAURANT AND TH PICTURES OF THE OWNERS*/
+
+ .description {
     background-color: rgb(49, 63, 57);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 2rem;
  }
 
- .describe{
+ .describe {
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: center;   
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 
-.photos{
+.photos {
     
     display: flex;
     flex: 1;
@@ -327,6 +251,7 @@ a:hover{
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-right: 2rem;
 }
  .description img{
     max-width: 50%;
@@ -334,13 +259,13 @@ a:hover{
     border-radius: 16px;
 }
 
-.mario{
-margin-top: -3rem;
-margin-left: 10rem;
-}
+    .mario{
+        margin-top: -3rem;
+        margin-left: 10rem;
+    }
 
 
-.describe h1{
+.describe h1 {
     color: rgba(227, 227, 36, 0.963);
     font-family: 'Georgia'; 
     font-size: xx-large;
@@ -349,131 +274,170 @@ margin-left: 10rem;
     margin-top: 2rem;
 
 }
-.describe h2{
+.describe h2 {
     color:white;
     margin-left: 1rem;
     font-size: xx-large;
     font-family: 'Georgia';
 }
 
-.describe p{
+.describe p {
     color: white;
     font-family: 'Georgia';
     font-size: larger;
     margin-left: 1rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-   
-
 }
 
-.footer{
+       /*FOOTER*/
+
+.footer {
     background-color: rgb(236, 236, 236);
     display: flex;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
 }
-.logo2{
+
+.logo2 {
     height: 2rem;
     width: 9rem;
-    margin-top: 0.3rem;
+    margin-top: 1rem;
     margin-left: 0.5rem;
    
 }
-.footer a{
+
+.footer a {
     color: rgb(97, 101, 105);
-    font-size: medium;
+    font-size: medium;}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.about{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-.about1{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-}
-.about2{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-}
+  /*MEDIA BREAKPOINTS*/
+  @media (max-width:860px){
+    .navigation a{
+        font-size: medium;
+    }
+  }
 
-@media (max-width:992px) {
-    .navigation{
-        margin-left: 10rem;
+  @media (max-width:816px){
+    .navigation a{
+        font-size: small;
+        font-weight: bold;
     }
 }
+
+    @media (max-width:812px){
+        .text p{
+            line-height: 2rem;
+        }
+      }
+  
+
+
 @media (max-width:768px){
-    .navigation{
+    
+    .text p{
+        line-height: 1.5rem;
+        font-size: large;
+    }
+
+    .navigation {
         flex-direction: column;
         align-items: center;
         margin-right: 2rem;
     }
-    .navigation ul{
+
+    .navigation ul {
         display: none;
         background-color: antiquewhite;
-        width: 100%;
         text-align: center;
     }
-   
-   .bars{
-        display: block;
-        margin-left: 33rem;
 
+   .bars {
+        display: block;
     }
+
     .menu {
         flex-direction: column; 
         justify-content: space-between;
     }
-    .container{
+    .headerImage{
+        max-width: 40%;
+        height: auto;
+    }
+
+    .container {
         justify-content: space-between;
     }
+
     .card {
     flex-direction: row;
     margin-bottom: 1rem;
 
     }
-    .card img{
+
+    .card img {
         width: 15rem;
         height: 12rem;
     }
-    .titreEtPrix{
+
+    .titreEtPrix {
         margin-top: -1.3rem;
     }
-    .order{
+
+    .order {
         margin-top: 0.5rem;
     }
-    @media (max-width:576px){
+}
+
+@media (max-width:648px){
+
+    .headerImage{
+        max-width: 35%;
+        height: auto;
+    }
+    .paragraph{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width:600px){
+
+    .text p {
+        font-size: medium;
+    }
+}
+
+
+ @media (max-width:576px){
+
         .logo1{
             margin-left: 0.5rem;
             height: 2rem;
             width: 8rem;
         }
-        .bars{
-            margin-left: 25rem;
-            margin-top: 0.5rem;
-        }
-        .headerImage{
+
+        .headerImage {
            max-width: 30%;
            height: auto;
         }
-        .paragraph{
+
+        .paragraph {
             margin-left: 2rem;
             margin-top: 3rem;
         }
-        .text button{
+
+        .text button {
             margin-top: 1rem;
             margin-bottom: 0.7rem;
             font-size: small;
@@ -481,19 +445,23 @@ margin-left: 10rem;
             height: 1.5rem;
             font-weight: bold;
         }
-        .text p{
+
+        .text p {
+            font-size: medium;
+        }
+
+        .specials p {
             font-size: large;
         }
-        .specials p{
-            font-size: large;
-        }
-        .specials button{
+
+        .specials button {
             font-size: small;
             width: 8rem;
             height: 1.5rem;
             font-weight: bold;
         }
-        .specials{
+
+        .specials {
             margin-top: 5rem;
             margin-left: 4rem;
             margin-right: 4rem;
@@ -505,495 +473,68 @@ margin-left: 10rem;
             margin-left: 2rem;
             margin-right: 2rem;
         }
-        .card img{
+
+        .card img {
             width: 100%;
             height: 9rem;
         }
-        .rating{
+
+        .rating {
             flex-direction: column;
         }
+
         .pers img {
             max-width: 40%;
             height: auto;
         }
-        .photos{
+
+        .photos {
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
-         .description img{
+
+         .description img {
             width: auto;
             height: 80%;
             border-radius: 16px;
         }
         
-        .mario{
-        margin-top: -2rem;
-        margin-left: 4rem;
+        .mario {
+            margin-top: -2rem;
+            margin-left: 4rem;
         }
-      
+
         
-    }
-    /*.card2 {
-        flex-direction: row;
-        margin-top: 1rem;
+        .footer a {
+            font-size: small;
         }
-      
-        .titreEtPrix1{
-            margin-top: -1.3rem;
-        }
-        .order1{
-            margin-top: 0.5rem;
-        }
-        
-        .card3 {
-            flex-direction: row;
+
+        .logo2 {
             margin-top: 1rem;
-            }
-            .titreEtPrix2{
-                margin-top: -1.3rem;
-            }
-            .order2{
-                margin-top: 0.5rem;
-            }*/
- 
+            height: 2rem;
+            width: 7rem;
+        }
 }
 
-/*@media (max-width: 600px) {
-
-    .logo1 {
-        height: 2rem;
-        width: 6.8rem;
-        margin-top: 2rem;
-        margin-left: 1rem;
-    }
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 10rem;
-    }
-    .navigation a{
-        color: white;
-        margin: 0.5rem 0;
-        margin-top: 1rem;
-        display: none;
-      
-     }
-     .navigation a:hover{
-        background-color:rgba(227, 227, 36, 0.963);
-        border-radius: 16px;
-        transition: .5s;
-    }
-    .bars{
-        display: block;
-        font-size: larger;
-        margin-left: 23rem;
-        margin-top: 0.6rem;
-     }
-
-
-    .text{
-        background-color: rgb(49, 63, 57);
-        display: flex;
-        flex-direction: column;
-        height: 15rem;
-        width: 100%;
-    
-    }
-    .headerImage{
-        margin-left: 70%;
-        margin-bottom: -1rem;
-        border-radius: 16px;
-        width: 160px;
-    }
-    .text h1{
-        color: rgba(227, 227, 36, 0.963);
-        font-family: 'Georgia'; 
-        font-size: x-large;
-        margin-left: 2rem;
-        margin-bottom: -3rem;
-        margin-top: 2rem;
-    
-    }
-    
-    .text h2{
-        color:white;
-        margin-left: 2rem;
-        margin-top: 2.7rem;
-        font-size: larger;
-        font-family: 'Georgia';
-    
-    }
-    
-    .text p{
-        color: white;
-        font-family: 'Georgia,serif';
-        font-size: medium;
-        margin-left: 2rem;
-        margin-top: 1rem;
-        width: 270px;
-    
-    }
-    .text button{
-        width: 8rem;
-        height: 1.5rem;
-        margin-left: 2rem;
-        margin-top: 2rem;
-        background-color: rgba(227, 227, 36, 0.963);
-        border-radius: 16px;
-        font-family: 'rubik';
-        font-size: small;
-        font-weight: bold;
-    
-    }
-    .specials{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .specials p{
-        margin-top: 3rem;
-        margin-left: 2rem;
-        font-size: medium;
-        font-family: 'rubik';
-        font-weight: bold;
-    }
-    .specials button{
-        margin-top: 3rem;
-        margin-right: 1.5rem;
-        width: 8rem;
-        height: 1.5rem;
-        border-radius: 16px;
-        background-color: rgba(227, 227, 36, 0.963);
-        font-family: 'rubik';
-        font-size: small;
-        font-weight: bold;
-
-    }
-    .menu{
-        background-color: aquamarine;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 2rem;
-        margin-left: 0.4rem;
-        width: 100%;
-    }
-    .card1{
-        background-color: rgb(236, 236, 236);
-        flex-direction: row;
-        border-radius: 16px;
-    }
-    .card1 img{
-        width: 9rem;
-        height: 9rem;
-        border-radius: 16px;
-    }
-    .card1 h2{
-        background-color: aqua;
-        width: 20rem;
-        height: 1.5rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        font-family: 'Raleway';
-        font-size: medium; 
-    }
-    .card1 h3{
-        background-color: blanchedalmond;
-        height: 1rem;
-        margin-top: 1rem;
-        margin-left: 1rem;
-        font-size: small;
-        color: orange;
-    }
-    .card1 p{
-        background-color: blueviolet;
-        height: 3.5rem;
-        width: 23rem;
-        margin-left: -23.5rem;
-        margin-top: 3rem;
-        color: grey;
-        font-size: small;
-    
-    }
-    .card1 a{
-        background-color: bisque;
-        width: 17rem;
-        height: 1.5rem;
-        margin-left: -23rem;
-        margin-top: 7rem;
-        color: black;
-        font-family: 'Rubik';
-        font-size: small;
-        font-weight: bold;
-    }
-    .icon1{
-        margin-left: -12em;
-        margin-right: 1rem;
-        margin-top: 7.1rem;
-        margin-bottom: 1rem;
-        font-size: small;
-     }
-    
-    .card2{
-        background-color: rgb(236, 236, 236);
-        flex-direction: row;
-        border-radius: 16px;
-        margin-top: 1rem;
-    }
-    .card2 img{
-        width: 9rem;
-        height: 9rem;
-        border-radius: 16px;
-    }
-    .card2 h2{
-        background-color: aqua;
-        width: 20rem;
-        height: 1.5rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        font-family: 'Raleway';
-        font-size: medium; 
-    }
-    .card2 p{
-        background-color: blueviolet;
-        height: 5rem;
-        width: 25.5rem;
-        margin-left: -23.1rem;
-        margin-top: 3rem;
-        color: grey;
-        font-size: small;
-    
-    }
-    .card2 h3{
-        background-color: blanchedalmond;
-        height: 1rem;
-        margin-top: 1rem;
-        margin-left: 1rem;
-        font-size: small;
-        color: orange;
-    }
-    .card2 a{
-        background-color: bisque;
-        width: 17rem;
-        height: 1.5rem;
-        margin-left: -25.5rem;
-        margin-top: 8.5rem;
-        color: black;
-        font-family: 'Rubik';
-        font-size: small;
-        font-weight: bold;
-    }
-    .icon2{
-        margin-left: -12em;
-        margin-right: 1rem;
-        margin-top: 8.6rem;
-        font-size: small;
-     }
-    .card3{
-        background-color: rgb(236, 236, 236);
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-        border-radius: 16px;
-        margin-top: 1rem;
-    }
-    .card3 img{
-        width: 9rem;
-        height: 9rem;
-        border-radius: 16px;
-    }
-    .card3 h2{
-        margin-left: 1rem;
-        margin-top: 1rem;
-        font-family: 'Raleway';
-        font-size: medium; 
-    }
-    .card3 h3{
-        margin-top: 1rem;
-        margin-left: 12rem;
-        font-size: small;
-        color: orange;
-    }
-    .card3 p{
-        margin-left: -17.2rem;
-        margin-top: 4rem;
-        color: grey;
-        font-size: x-small;
-    }
-    .card3 a{
-        margin-left: 0.3rem;
-        margin-top: 7rem;
-        text-decoration: none;
-        color: black;
-        font-family: 'Rubik';
-        font-size: small;
-    }
-    .icon3{
-        margin-left: 6.3rem;
-        margin-top: -0.7rem;
-        margin-bottom: 1.5rem;
-        font-size: x-small;
-     }
-     .rating{
-        background-color: rgb(236, 236, 236);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 3rem;
-        width: 24rem;
-     }
-    
-     .pers1{
-        display: flex;
-        flex-direction: column;
-        margin-left: 0.7rem;
-        align-items: center;
-    }
-    .pers2{
-        display: flex;
-        flex-direction: column;
-        margin-left: 0.7rem;
-        align-items: center;
-    }
-    .pers3{
-        display: flex;
-        flex-direction: column;
-        margin-left: 0.7rem;
-        align-items: center;
-        margin-bottom: 0.5rem;
-    }
-    .stars{
-        font-size: small;
-        margin-top: 0.5rem;
-        color: rgba(227, 227, 36, 0.963);
-    }
-    .stars2{
-        font-size: small;
-        margin-top: 0.5rem;
-        color: rgba(227, 227, 36, 0.963);
-    }
-    .stars3{
-        font-size: small;
-        margin-top: 0.5rem;
-        color: rgba(227, 227, 36, 0.963);
-    }
-    
-     .pers1 img{
-        width: 7rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    
-     }
-     .pers2 img{
-        width: 7rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    
-     }
-     .pers3 img{
-        width: 7rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-     }
-     .rating h3{
-        font-size: small;
-        font-family: 'relway';
-     }
-
-     .description{
-        background-color: rgb(49, 63, 57);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 3rem;
-        width: 24rem;
-     }
-     .description img{
-        width: 7rem;
-        height: 10rem;
-        border-radius: 16px;
-    }
-    .describe{
-        margin-top: 1rem;
-        margin-right: 2rem;
-        margin-left: -6rem;
-    }
-    .photos{
-        margin-top: 0.5rem;
-        margin-right: 0.5rem;
-    }
-    .describe h1{
-        color: rgba(227, 227, 36, 0.963);
-        font-family: 'Georgia'; 
-        font-size: medium;
-        margin-left: 7rem;
-        margin-bottom: -0.2rem;
-        margin-top: 3rem;
-    
-    }
-    .describe h2{
-        color:white;
-        margin-left: 7rem;
-        font-size: medium;
-        font-family: 'Georgia';
-    }
-    
-    .describe p{
-        color: white;
-        font-family: 'Georgia';
-        font-size: small;
-        margin-left: 7rem;
-        margin-top: 1rem;
-    
-    }
-    .mario{
-       margin-top: -6rem;
-       margin-left: 4rem;
-       margin-bottom: 0.5rem;
-    }
+@media (max-width : 481px){
 
     .footer{
-        background-color: rgb(236, 236, 236);;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 3rem;
-        margin-bottom: 0.5rem;
-        height: 11rem;
-        width: 24rem;
-    }
-    .logo2{
-        height: 1rem;
-        width: 5rem;
-        margin-top: 0.3rem;
-        margin-left: 0.2rem;
-       
-    }
-    
-    .footer a{
-        font-size: x-small;
-        font-family: 'Rubik';
-        color: black;
-    
-    }
-    .about{
-        display: flex;
         flex-direction: column;
-        margin-top: 0.6rem;
-        margin-right: 1rem;
-    
     }
-    .about1{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0.7rem;
-        margin-right: 1rem;
-    
-    }
-    .about2{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0.8rem;
-        margin-right: 2rem;
-    
-    }
-}*/
+    .logo{
+        align-self: center;
+        }
+        .description {
+            flex-direction: column;
+        }   
+        .text{
+            flex-direction: column;
+        }
+        .headerImage{
+            margin-left: 11rem;
+            margin-top: 0.2rem;
+            max-width: 40%;
+            height: auto;
+        
+        }
+}
