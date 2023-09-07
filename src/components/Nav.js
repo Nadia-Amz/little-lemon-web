@@ -9,32 +9,32 @@ const Nav = () => {
             <FontAwesomeIcon className="bars" icon={faBars} />
         
             <ul>
-                <li><a href="#home">Home</a> 
+                <li><a href="/home">Home</a> 
                 </li>
             </ul>
 
             <ul>
-                <li> <a href="#about">About</a>
+                <li> <a href="/about">About</a>
                 </li>
             </ul>
 
             <ul>
-                <li>  <a href="#menu">Menu</a>
+                <li>  <a href="/menu">Menu</a>
                 </li>
             </ul>
 
             <ul>
-                <li> <a href="#reservation">Reservation</a>
+                <li> <a href="/reservation">Reservation</a>
                 </li>
             </ul>
 
             <ul>
-                <li><a href="#orderonline">Order Online</a>
+                <li><a href="/orderOnline">Order Online</a>
                 </li>
             </ul>
             
             <ul>
-                <li> <a href="#login">Login</a>
+                <li> <a href="/login">Login</a>
                 </li>
             </ul>
 

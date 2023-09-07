@@ -4,6 +4,9 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Reservation from './components/Reservation';
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
       </div>
       <Main />
       <Footer />
+      <Reservation/>
+      <Routes>
+        <Route path="/reservation" element={<Reservation/>}/>
+      </Routes>
     </div>
   );
 }

@@ -28,7 +28,7 @@ const Main = () => {
             </section>
 
            <section className="specials">
-            <p>This weeek specials !</p>
+            <p>This week specials !</p>
             <button type="submit">Online Menu</button></section>
 
             <section className="menu">
