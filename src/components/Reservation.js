@@ -12,7 +12,7 @@ const Reservation = () => {
     const [selectedPartysize, setSelectedPartysize] = useState('2people');
     const [selectedYear, setSelectedYear] = useState('2023');
     const [selectedMonth, setSelectedMonth] = useState('1');
-    const [selectedDay, setSelectedDay] = useState('1');
+    const [selectedDay, setSelectedDay] = useState('01');
     const [selectedHour, setSelectedHour] = useState('14');
     const [selectedMinute, setSelectedMinute] = useState('00');
 
@@ -112,13 +112,13 @@ const Reservation = () => {
 
       <label htmlFor="day">Day:</label>
       <select id="day" value={selectedDay} onChange={handleDayChange}>
-        <option value="1">Monday</option>
-        <option value="2">Tuesday</option>
-        <option value="3">Wednesday</option>
-        <option value="4">Thursday</option>
-        <option value="5">Friday</option>
-        <option value="6">Saturday</option>
-        <option value="7">Sunday</option>
+        <option value="01">Monday</option>
+        <option value="02">Tuesday</option>
+        <option value="03">Wednesday</option>
+        <option value="04">Thursday</option>
+        <option value="05">Friday</option>
+        <option value="06">Saturday</option>
+        <option value="07">Sunday</option>
 
       </select>
       </div>

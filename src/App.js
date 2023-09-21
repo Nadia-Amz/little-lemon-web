@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Reservation from './components/Reservation';
-import { Routes, Route } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -18,9 +18,11 @@ function App() {
       <Main />
       <Footer />
       <Reservation/>
+      <Router>
       <Routes>
         <Route path="/reservation" element={<Reservation/>}/>
       </Routes>
+      </Router>
     </div>
   );
 }
