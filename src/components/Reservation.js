@@ -58,8 +58,7 @@ const Reservation = () => {
                 <FormControlLabel required control={<Checkbox />} label="Outdoor" />
 
                 <div>
-                <h1>Occasion :</h1>
-      <label htmlFor="occasionDropdown">Dropdown 1:</label>
+      <label htmlFor="occasionDropdown">Occasion :</label>
       <select
         id="occasionDropdown"
         value={selectedOccasion}
@@ -71,8 +70,7 @@ const Reservation = () => {
         <option value="anniversary">Anniversary</option>
         </select>
 
-        <h1>Party size :</h1>
-        <label htmlFor="partysizeDropdown">Dropdown 2:</label>
+        <label htmlFor="partysizeDropdown">Party size :</label>
       <select
         id="partysizeDropdown"
         value={selectedPartysize}
@@ -155,6 +153,7 @@ const Reservation = () => {
         <option value="11">55</option>
       </select>
     </div>
+    <button type="submit">Submit</button>
     </form>
         </section>
     );
