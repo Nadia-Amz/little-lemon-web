@@ -2,6 +2,7 @@ import React from "react";
 import '../components/css/Style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
@@ -9,32 +10,32 @@ const Nav = () => {
             <FontAwesomeIcon className="bars" icon={faBars} />
         
             <ul>
-                <li><a href="/home">Home</a> 
+                <li><Link to="/home">Home</Link> 
                 </li>
             </ul>
 
             <ul>
-                <li> <a href="/about">About</a>
+                <li> <Link to="/about">About</Link>
                 </li>
             </ul>
 
             <ul>
-                <li>  <a href="/menu">Menu</a>
+                <li>  <Link to="/menu">Menu</Link>
                 </li>
             </ul>
 
             <ul>
-                <li> <a href="/reservation">Reservation</a>
+                <li> <Link to="/reservation">Reservation</Link>
                 </li>
             </ul>
 
             <ul>
-                <li><a href="/orderOnline">Order Online</a>
+                <li><Link to="/orderOnline">Order Online</Link>
                 </li>
             </ul>
             
             <ul>
-                <li> <a href="/login">Login</a>
+                <li> <Link to="/login">Login</Link>
                 </li>
             </ul>
 

@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import Header from "./Header";
 import Nav from "./Nav";
 import restaurant from "../images/restaurant.jpg";
-import { Checkbox } from "@chakra-ui/react";
+import FormGroup  from '@mui/material/FormGroup';
+import Checkbox  from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Footer from "./Footer";
 
 
 const Reservation = () => {
@@ -43,20 +45,25 @@ const Reservation = () => {
   const handleMinuteChange = (event) => {
     setSelectedMinute(event.target.value);
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
     return (
         <section className="Form">
             <Header/>
             <Nav/>
+            <Footer/>
             <div className="hero">
             <img className="restaurant" src= {restaurant} alt=""></img>
             </div>
-            <form className="formGroup">
+            <form className="formGroup" onSubmit={handleSubmit}>
                 <h1>Reserve a table</h1>
                 <h2>Seating options :</h2>
-                <FormControlLabel required control={<Checkbox />} label="Standard" />
-                <FormControlLabel required control={<Checkbox />} label="Outdoor" />
-
+              <FormGroup>
+                <FormControlLabel required control={<Checkbox />} label="Standard" /> 
+                <FormControlLabel required control={<Checkbox />} label="Outdoor" /> 
+                </FormGroup>
                 <div>
       <label htmlFor="occasionDropdown">Occasion :</label>
       <select
