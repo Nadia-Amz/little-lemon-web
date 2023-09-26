@@ -1,11 +1,8 @@
 import React, {useState} from "react";
-import Header from "./Header";
-import Nav from "./Nav";
 import restaurant from "../images/restaurant.jpg";
 import FormGroup  from '@mui/material/FormGroup';
 import Checkbox  from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Footer from "./Footer";
 
 
 const Reservation = () => {
@@ -51,9 +48,6 @@ const Reservation = () => {
 
     return (
         <section className="Form">
-            <Header/>
-            <Nav/>
-            <Footer/>
             <div className="hero">
             <img className="restaurant" src= {restaurant} alt=""></img>
             </div>
