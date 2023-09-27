@@ -67,6 +67,7 @@ a:hover {
     border-radius: 16px;
     font-family: 'rubik';
     font-size: medium;
+    cursor: pointer;
 }
 
 .text h1 {
@@ -321,6 +322,101 @@ a:hover {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
+
+ /*reservePage*/
+
+ .restaurant {
+    margin-top: 1rem;
+    width: 100%;
+    height: 25rem;
+ }
+
+ .formgroup h1{
+    text-align: center;
+    font-family: 'Georgia';
+    margin-top: 1rem;
+    font-size: x-large;
+ }
+ 
+.formgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    max-width: 70%;
+    height: auto;
+    border-radius: 16px ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-left: 15rem;
+    padding-bottom: 1rem;
+ }
+
+ .options label{
+    margin-right: 1rem;
+
+ }
+
+ .options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 2rem;
+
+ }
+
+ 
+ .options input[type="checkbox"] {
+    margin-right: 10px;
+   
+  }
+
+
+.Occasion,
+.Party,
+.date,
+.hour {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.Occasion label,
+.Party label,
+.date label,
+.hour label,
+.options p {
+    margin-right: 5rem;
+}
+
+.Occasion select,
+.Party select,
+.date select,
+.hour select{
+    padding: 5px 15px;
+    border-radius: 16px;
+    background-color:  rgb(236, 236, 236);
+    color: rgb(49, 63, 57);
+}
+
+
+.buttonR {
+    background-color: rgba(227, 227, 36, 0.963);
+    color: black;
+    font-family: 'Rubik';
+    padding: 5px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  
+button:hover {
+    background-color: rgb(49, 63, 57);
+    color: white;
+  }
 
   /*MEDIA BREAKPOINTS*/
   @media (max-width:860px){
