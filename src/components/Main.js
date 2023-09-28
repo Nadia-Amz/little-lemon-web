@@ -6,9 +6,6 @@ import lemonDessert from "../images/lemonDessert.jpg";
 import lolita from "../images/lolita.jpg";
 import carlos from "../images/carlos.jpg";
 import karim from "../images/karim.jpg";
-import chef  from "../images/chef B.jpg";
-import Mario from "../images/Mario and Adrian b.jpg";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBicycle } from '@fortawesome/free-solid-svg-icons';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
@@ -123,18 +120,7 @@ const Main = () => {
                 <h3>karim</h3>
                 </section>
             </section>
-            <section className="description">
-                <article className="describe">
-                <h1>Little Lemon</h1>
-                <h2>Chicago</h2>
-                <p>We are a family owned Mediterranean restaurant, 
-                    focused on traditional recipes served with a modern twist.</p>
-                    </article>
-                    <article className="photos">
-                    <img className="chef" src={chef} alt=""></img>
-                    <img className="mario" src={Mario} alt=""></img>
-                    </article>
-            </section>
+            
         </main>
     );
 };

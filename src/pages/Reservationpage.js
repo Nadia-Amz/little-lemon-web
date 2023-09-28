@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Header from "../components/Header";
 import Reservation from "../components/Reservation";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 const Reservationpage = () =>{
     return (
@@ -12,6 +13,7 @@ const Reservationpage = () =>{
             <Nav/>
             </div>
             <Reservation/>
+            <Testimonials/>
             <Footer/>
         </div>
     );

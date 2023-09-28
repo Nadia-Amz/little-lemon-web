@@ -335,61 +335,31 @@ a:hover {
     text-align: center;
     font-family: 'Georgia';
     margin-top: 1rem;
+    padding-bottom: 3rem;
     font-size: x-large;
+    color: rgb(49, 63, 57);
  }
  
 .formgroup{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(236, 236, 236);
-    max-width: 70%;
+    align-items: center; 
+    max-width: 100%;
     height: auto;
     border-radius: 16px ;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
-    margin-left: 15rem;
-    padding-bottom: 1rem;
  }
-
- .options label{
-    margin-right: 1rem;
-
- }
-
- .options{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-top: 2rem;
-
- }
-
- 
- .options input[type="checkbox"] {
-    margin-right: 10px;
-   
-  }
-
 
 .Occasion,
 .Party,
 .date,
-.hour {
+.hour,
+.options {
+ 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   margin-top: 3rem;
-}
-
-.Occasion label,
-.Party label,
-.date label,
-.hour label,
-.options p {
-    margin-right: 5rem;
 }
 
 .Occasion select,
@@ -398,11 +368,55 @@ a:hover {
 .hour select{
     padding: 5px 15px;
     border-radius: 16px;
-    background-color:  rgb(236, 236, 236);
-    color: rgb(49, 63, 57);
+    background-color:  rgb(49, 63, 57);
+    color: rgb(243, 246, 245);
 }
+.Occasion select,
+.Party select,
+.dropdowndate,
+.dropdownhour,
+.optioncheckbox{
+    /* margin-left: 5rem; */
+    width: 15rem;
 
+}
+.dropdowndate{
+    display: flex;
+    flex-direction: row;
+}
+.dropdownhour{
+    display: flex;
+    flex-direction: row;
+}
+.labels{
+    
+    width: 12rem;
+    
+}
+.optioncheckbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.standardcheck label,
+.outdoorcheck label
+{
+    margin-left: 1rem;
+    color: rgb(49, 63, 57);;
+}
+.border{
+    width: 50%;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+}
+.buttonS{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .buttonR {
     background-color: rgba(227, 227, 36, 0.963);
     color: black;
@@ -411,6 +425,7 @@ a:hover {
     border-radius: 16px;
     cursor: pointer;
     margin-top: 2rem;
+
   }
   
 button:hover {
@@ -419,10 +434,21 @@ button:hover {
   }
 
   /*MEDIA BREAKPOINTS*/
+
+  @media (max-width:992px){
+    .border{
+        width: 60%;
+    }
+}
+
   @media (max-width:860px){
     .navigation a{
         font-size: medium;
     }
+    .border{
+        width: 60%;
+    }
+   
   }
 
   @media (max-width:816px){
@@ -430,6 +456,22 @@ button:hover {
         font-size: small;
         font-weight: bold;
     }
+    .photos {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+     .description img {
+        width: auto;
+        height: 80%;
+        border-radius: 16px;
+    }
+    
+    .mario {
+        margin-top: -2rem;
+        margin-left: 4rem;
+    }
+    
 }
 
     @media (max-width:812px){
@@ -494,8 +536,27 @@ button:hover {
     .order {
         margin-top: 0.5rem;
     }
+    .border{
+        width: 65%;
+    }
 }
 
+@media (max-width:748px){
+    .border{
+        width: 70%;
+    }
+    .restaurant{
+        height: 15rem;
+    }
+}
+@media (max-width:671px){
+    .border{
+        width: 80%;
+    }
+    .restaurant{
+        height: 15rem;
+    }
+}
 @media (max-width:648px){
 
     .headerImage{
@@ -504,13 +565,20 @@ button:hover {
     }
     .paragraph{
         margin-top: 2rem;
+    } 
+    .restaurant{
+        height: 15rem;
     }
+    
 }
 
 @media (max-width:600px){
 
     .text p {
         font-size: medium;
+    }
+    .restaurant{
+        height: 15rem;
     }
 }
 
@@ -610,10 +678,36 @@ button:hover {
             height: 2rem;
             width: 7rem;
         }
+        .border{
+            width: 90%;
+        }
+        .restaurant{
+            height: 15rem;
+        }
 }
 
-@media (max-width : 481px){
+@media (max-width : 510px){
+    .border{
+        width: 95%;
+    }
+    .restaurant{
+        height: 15rem;
+    }
+}
+@media (max-width : 500px){
+    .footer{
+        flex-direction: column;
+    }
+    .logo{
+        align-self: center;
+        }
+        .description {
+            flex-direction: column;
+        }  
+    }
 
+@media (max-width : 481px){
+    
     .footer{
         flex-direction: column;
     }
