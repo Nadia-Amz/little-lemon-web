@@ -346,7 +346,6 @@ a:hover {
     align-items: center; 
     max-width: 100%;
     height: auto;
-    border-radius: 16px ;
     margin-top: 2rem;
  }
 
@@ -727,4 +726,22 @@ button:hover {
             height: auto;
         
         }
+}
+@media (max-width : 465px){
+.Occasion,
+.Party,
+.date,
+.hour,
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.labels{
+    padding-bottom: 1rem;
+    width: 15rem;
+}
+
 }
