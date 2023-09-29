@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import restaurant from "../images/restaurant.jpg";
 import '../components/css/Style.css';
-
 
 
 const Reservation = () => {
@@ -53,6 +53,11 @@ const Reservation = () => {
 
   const handleOutdoorChange = () => {
     setOutdoorChecked(!outdoorChecked);
+  };
+  
+  const navigate = useNavigate();
+  const navigateToConfirmationpage =() =>{
+    navigate('/confirmationpage');
   };
 
   return (
@@ -208,7 +213,9 @@ const Reservation = () => {
             </div>
           </div>
           <div className="buttonS">
-            <button className="buttonR" type="submit">Submit</button>
+          
+            <button className="buttonR" type="submit" onClick={navigateToConfirmationpage}>Submit</button>
+           
           </div>
         </div>
       </form>

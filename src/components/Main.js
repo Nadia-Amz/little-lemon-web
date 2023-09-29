@@ -9,8 +9,14 @@ import karim from "../images/karim.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBicycle } from '@fortawesome/free-solid-svg-icons';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
+import {useNavigate} from 'react-router-dom';
+
 
 const Main = () => {
+    const navigate = useNavigate();
+    const navigateToReservationpage =() =>{
+      navigate('/reservationpage');
+    };
     return (
         <main>
            <section className="text">
@@ -19,7 +25,7 @@ const Main = () => {
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant,
             focused on traditional recipes served with a modern twist.</p>
-                <button type="submit">Reserve a table</button>
+                <button type="submit" onClick={navigateToReservationpage}>Reserve a table</button>
                 </div>
                 <img className="headerImage" src={ImageHeader} alt=""></img>
             </section>

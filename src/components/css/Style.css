@@ -388,7 +388,7 @@ a:hover {
     flex-direction: row;
 }
 .labels{
-    
+    font-family: 'Rubik';
     width: 12rem;
     
 }
@@ -432,6 +432,81 @@ button:hover {
     color: white;
   }
 
+  /*Confirmation*/
+
+  .confirmaionForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+
+  .case{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+  }
+  .case input{
+    padding: 10px 15px;
+    border-radius: 16px;
+    background-color:  rgb(49, 63, 57);
+    color: rgb(243, 246, 245);
+    width: 15rem;
+  }
+
+  .border h1{
+    text-align: center;
+    font-family: 'Georgia';
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    font-size: x-large;
+    color: rgb(49, 63, 57);
+  }
+  .labelss{
+    width: 12rem;
+    font-family: 'Rubik';
+  }
+  .Comments{
+   height: 10rem;
+  }
+
+  /*Confirmed*/
+.Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+  .iconCheck{
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+  }
+  .ICON{
+    font-size:20rem;
+    color: rgb(49, 63, 57);
+  }
+  .Infos h1{
+    text-align: center;
+    font-family: 'Georgia';
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    font-size: x-large;
+    color: rgb(49, 63, 57);
+  }
+
+  .Infos h3{
+    font-family: 'Rubik';
+    font-size: medium;
+  }
   /*MEDIA BREAKPOINTS*/
 
   @media (max-width:992px){
@@ -477,6 +552,10 @@ button:hover {
         .text p{
             line-height: 2rem;
         }
+        .ICON{
+            font-size:15rem;}
+            .iconCheck{
+                height: 17rem;}
       }
   
 
@@ -538,6 +617,10 @@ button:hover {
     .border{
         width: 65%;
     }
+    .ICON{
+        font-size:12rem;}
+        .iconCheck{
+            height: 15rem;}
 }
 
 @media (max-width:748px){
@@ -579,6 +662,7 @@ button:hover {
     .restaurant{
         height: 15rem;
     }
+   
 }
 
 
@@ -726,6 +810,17 @@ button:hover {
             height: auto;
         
         }
+        .case{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        
+          }
+          .labelss{
+            margin-bottom: 1rem;
+          }
 }
 @media (max-width : 465px){
 .Occasion,
@@ -743,5 +838,15 @@ button:hover {
     padding-bottom: 1rem;
     width: 15rem;
 }
+.ICON{
+    font-size:10rem;
+    }
+    .iconCheck{
+        height: 15rem;}
+        
+  .Infos h3{
+    
+    font-size: small;
+  }
 
 }
