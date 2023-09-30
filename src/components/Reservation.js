@@ -41,18 +41,39 @@ const Reservation = () => {
   const handleMinuteChange = (event) => {
     setSelectedMinute(event.target.value);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
+
+  const [errorMessage, setErrorMessage] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Check if every input field is filled out
+    if (standardChecked || outdoorChecked) {
+      console.log("ACCEPTED");
+      navigateToConfirmationpage();
+    } else {
+      setErrorMessage("Oops! The form is uncompleted");
+          // alert("The form is uncompleted");
+          // console.log("The form is uncompleted");
+    }
+
   };
+  
   const [standardChecked, setStandardChecked] = useState(false);
   const [outdoorChecked, setOutdoorChecked] = useState(false);
 
   const handleStandardChange = () => {
     setStandardChecked(!standardChecked);
+    if (outdoorChecked) {
+      setOutdoorChecked(!outdoorChecked);
+    }
   };
 
   const handleOutdoorChange = () => {
     setOutdoorChecked(!outdoorChecked);
+    if (standardChecked) {
+      setStandardChecked(!standardChecked);
+    }
   };
   
   const navigate = useNavigate();
@@ -65,9 +86,11 @@ const Reservation = () => {
       <div>
         <img className="restaurant" src={restaurant} alt=""></img>
       </div>
-      <form className="formgroup" onSubmit={handleSubmit}>
+      <form className="formgroup" >
         <div className="border">
           <h1>Reserve a table</h1>
+          {errorMessage && <div className="error"> {errorMessage} </div>}
+
           <div className="options">
             <label className="labels">Seating options :</label>
             <div className="optioncheckbox">
@@ -213,8 +236,9 @@ const Reservation = () => {
             </div>
           </div>
           <div className="buttonS">
-          
-            <button className="buttonR" type="submit" onClick={navigateToConfirmationpage}>Submit</button>
+            <button className="buttonR" type="submit" onClick={handleSubmit} >Submit</button>
+            
+
            
           </div>
         </div>

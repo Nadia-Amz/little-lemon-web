@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import restaurant from "../images/restaurant.jpg";
 import {useNavigate} from 'react-router-dom';
 import '../components/css/Style.css';
@@ -6,9 +6,30 @@ import '../components/css/Style.css';
 
 const Confirmation = () => {
     const navigate = useNavigate();
-  const navigateToConfirmedpage =() =>{
+    const navigateToConfirmedpage =() =>{
     navigate('/confirmedpage');
   };
+
+    const[formData, setFormData] = useState({
+        name: '',
+        Lname: '',
+        phone: '',
+        email: '',
+        Comment:'',
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+          Lname: value,
+        });
+      };
+
+    // const handleSubmit = (e) => {
+    // e.preventDefault();
+    // };
 
     return(
         <form className="form">
@@ -22,19 +43,19 @@ const Confirmation = () => {
                 <div className="inputs">
                     <div className="case">
                 <label className="labelss">First name :</label>
-                         <input type="text" placeholder="Enter your first name"></input></div>
+                         <input type="text" name="name" placeholder="Enter your first name" onChange={handleChange} required></input></div>
                          <div className="case">
                 <label className="labelss">Last name :</label>
-                         <input type="text" placeholder="Enter your last name" ></input></div>
+                         <input type="text" name="Lname" placeholder="Enter your last name" onChange={handleChange} required></input></div>
                          <div className="case">
                 <label  className="labelss">Phone number :</label>
-                        <input type="text" placeholder="Enter your phone number"></input></div>
+                        <input type="tel" name ="phone" placeholder="Enter your phone number" required></input></div>
                         <div className="case">
                 <label className="labelss">Email :</label>
-                         <input type="text" placeholder="Enter your email address"></input></div>
+                         <input type="email" name ="email" placeholder="example@gmail.com" required></input></div>
                          <div className="case">
                 <label className="labelss">Comment :</label>
-                        <input className="Comments" type="text" placeholder="Your comment..."></input></div>
+                        <input className="Comments" name ="comment" type="text" placeholder="Your comment..."></input></div>
                         <div className="buttonS">
                 <button className="buttonR"type="submit" onClick={navigateToConfirmedpage}>Confirm</button></div>
         </div>

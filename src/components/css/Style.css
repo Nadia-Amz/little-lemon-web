@@ -375,7 +375,6 @@ a:hover {
 .dropdowndate,
 .dropdownhour,
 .optioncheckbox{
-    /* margin-left: 5rem; */
     width: 15rem;
 
 }
@@ -401,9 +400,12 @@ a:hover {
 .outdoorcheck label
 {
     margin-left: 1rem;
-    color: rgb(49, 63, 57);;
+    color: rgb(49, 63, 57);
 }
 .border{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     border-radius: 16px;
     border: 1px solid black;
@@ -430,6 +432,20 @@ a:hover {
 button:hover {
     background-color: rgb(49, 63, 57);
     color: white;
+  }
+
+  .error{
+    background-color: #f44336; 
+    color: #fff; 
+    padding: 12px 10px; 
+    border-radius: 16px; 
+    font-size: medium;
+    /* margin-bottom: 15rem;  */
+    border: 1px solid #d32f2f;
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    
   }
 
   /*Confirmation*/
@@ -522,6 +538,9 @@ button:hover {
     .border{
         width: 60%;
     }
+    .error{
+        width: 60%;
+      }
    
   }
 
@@ -555,7 +574,22 @@ button:hover {
         .ICON{
             font-size:15rem;}
             .iconCheck{
-                height: 17rem;}
+                height: 17rem;
+            }
+            
+      }
+@media(max-width: 808px){
+        .error{
+            padding: 5px 4px; 
+            font-size: small;
+            width: 50%;
+          }
+      }
+      @media(max-width: 799px){
+        .error{
+            
+            width: 50%;
+          }
       }
   
 
@@ -620,7 +654,12 @@ button:hover {
     .ICON{
         font-size:12rem;}
         .iconCheck{
-            height: 15rem;}
+            height: 15rem;
+        }
+        .error{
+           
+            width: 60%;
+          }
 }
 
 @media (max-width:748px){
@@ -848,5 +887,14 @@ button:hover {
     
     font-size: small;
   }
+  .error{
+   
+    width: 60%;
+  }
 
+}
+@media (max-width : 360px){
+    .error{
+        width: 60%;
+    }
 }
