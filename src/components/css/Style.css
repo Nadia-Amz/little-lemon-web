@@ -34,6 +34,12 @@
     flex-direction: row;
     margin-right: 2rem;
 }
+.navElements{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 2rem;
+}
 
 a:hover {
     text-decoration: underline rgb(93, 157, 124);
@@ -583,7 +589,7 @@ button:hover {
         }
         .ICON{
             font-size:15rem;}
-            .iconCheck{
+        .iconCheck{
                 height: 17rem;
             }
             
@@ -595,7 +601,8 @@ button:hover {
             width: 50%;
           }
       }
-      @media(max-width: 799px){
+      
+@media(max-width: 799px){
         .error{
             
             width: 50%;
@@ -611,20 +618,35 @@ button:hover {
         font-size: large;
     }
 
-    .navigation {
+     .navigation {
         flex-direction: column;
         align-items: center;
         margin-right: 2rem;
-    }
-
-    .navigation ul {
-        display: none;
-        background-color: antiquewhite;
+    } 
+    .navElements {
+        background-color: rgb(49, 63, 57);
+        border-radius: 16px;
+        flex-direction: column;
+        padding : 10px;
+        position : absolute;
+        top : 70px; 
+        right: 0;
+        width: 40%;
         text-align: center;
-    }
-
-   .bars {
-        display: block;
+        height: 65%;
+      }
+    
+      .navElements ul {
+        list-style: none;
+        padding: 0;
+      }
+    
+      .navElements ul li {
+        margin-bottom: 10px;
+      }
+      .bars {
+        display: block; 
+      }
     }
 
     .menu {
@@ -663,14 +685,14 @@ button:hover {
     }
     .ICON{
         font-size:12rem;}
-        .iconCheck{
+    .iconCheck{
             height: 15rem;
         }
-        .error{
+    .error{
            
             width: 60%;
           }
-}
+
 
 @media (max-width:748px){
     .border{
@@ -680,6 +702,8 @@ button:hover {
         height: 15rem;
     }
 }
+
+
 @media (max-width:671px){
     .border{
         width: 80%;
@@ -833,7 +857,7 @@ button:hover {
     .logo{
         align-self: center;
         }
-        .description {
+    .description {
             flex-direction: column;
         }  
     }
@@ -846,20 +870,20 @@ button:hover {
     .logo{
         align-self: center;
         }
-        .description {
+    .description {
             flex-direction: column;
         }   
-        .text{
+    .text{
             flex-direction: column;
         }
-        .headerImage{
+    .headerImage{
             margin-left: 11rem;
             margin-top: 0.2rem;
             max-width: 40%;
             height: auto;
         
         }
-        .case{
+    .case{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -867,13 +891,15 @@ button:hover {
             margin-bottom: 2rem;
         
           }
-          .labelss{
+
+    .labelss{
             margin-bottom: 1rem;
           }
-          span{
+    span{
             margin-right:12rem;
           }
 }
+
 @media (max-width : 465px){
 .Occasion,
 .Party,
@@ -893,15 +919,14 @@ button:hover {
 .ICON{
     font-size:10rem;
     }
-    .iconCheck{
+.iconCheck{
         height: 15rem;}
         
-  .Infos h3{
+.Infos h3{
     
     font-size: small;
   }
-  .error{
-   
+.error{
     width: 60%;
   }
 

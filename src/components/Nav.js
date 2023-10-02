@@ -1,16 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import '../components/css/Style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Link } from 'react-router-dom';
 
 const Nav = () => {
+
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    // const [showNav, setShowNav] = useState(false)
+
+    // const toggleNavItems = () => {
+    //  setShowNav(!showNav)
+    // }
+
+    // const removeNav = () => {
+    //     setShowNav(false)
+    // }
+
     return (
-        <nav className="navigation">
-            <FontAwesomeIcon className="bars" icon={faBars} />
-        
+        <nav className={`navigation ${isNavOpen ? 'open' : ''}`}>
+            {/* <FontAwesomeIcon className="bars" icon={faBars} onClick={toggleNavItems}/> */}
+            <button className="bars" onClick={() => setIsNavOpen(!isNavOpen)}>
+            <FontAwesomeIcon icon={faBars} />
+            </button>
+            {isNavOpen&&(
+        <div className="navElements" >
             <ul>
-                <li><Link to="/home">Home</Link> 
+                <li><Link to="/home">Home</Link>
                 </li>
             </ul>
 
@@ -38,7 +54,8 @@ const Nav = () => {
                 <li> <Link to="/login">Login</Link>
                 </li>
             </ul>
-
+            </div>
+            )}
         </nav>
     );
 };
