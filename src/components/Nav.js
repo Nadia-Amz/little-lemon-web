@@ -6,20 +6,11 @@ import {Link } from 'react-router-dom';
 
 const Nav = () => {
 
-    const [isNavOpen, setIsNavOpen] = useState(false);
-    // const [showNav, setShowNav] = useState(false)
+    const [isNavOpen, setIsNavOpen] = useState(true);
 
-    // const toggleNavItems = () => {
-    //  setShowNav(!showNav)
-    // }
-
-    // const removeNav = () => {
-    //     setShowNav(false)
-    // }
 
     return (
         <nav className={`navigation ${isNavOpen ? 'open' : ''}`}>
-            {/* <FontAwesomeIcon className="bars" icon={faBars} onClick={toggleNavItems}/> */}
             <button className="bars" onClick={() => setIsNavOpen(!isNavOpen)}>
             <FontAwesomeIcon icon={faBars} />
             </button>

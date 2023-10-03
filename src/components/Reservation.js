@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import restaurant from "../images/restaurant.jpg";
 import '../components/css/Style.css';
+
 
 
 const Reservation = () => {
@@ -53,8 +54,7 @@ const Reservation = () => {
       navigateToConfirmationpage();
     } else {
       setErrorMessage("Oops! The form is uncompleted");
-          // alert("The form is uncompleted");
-          // console.log("The form is uncompleted");
+  
     }
 
   };

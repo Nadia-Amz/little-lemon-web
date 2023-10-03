@@ -621,19 +621,21 @@ button:hover {
      .navigation {
         flex-direction: column;
         align-items: center;
-        margin-right: 2rem;
     } 
     .navElements {
-        background-color: rgb(49, 63, 57);
+        backdrop-filter: blur(5px) ;
         border-radius: 16px;
+        border: 1px solid black; 
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         padding : 10px;
         position : absolute;
         top : 70px; 
         right: 0;
-        width: 40%;
+        left: 0;
+        width: 100%;
         text-align: center;
-        height: 65%;
+        height: 38%;
       }
     
       .navElements ul {
@@ -642,10 +644,17 @@ button:hover {
       }
     
       .navElements ul li {
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
       }
       .bars {
         display: block; 
+        background-color: azure;
+      }
+      .navElements a{
+        color: black;
+        font-family: 'Rubik';
+        font-size: larger;
+        font-weight: lighter;
       }
     }
 
@@ -928,6 +937,14 @@ button:hover {
   }
 .error{
     width: 60%;
+  }
+
+  .navElements{
+    width: 50%;
+    height: 38%;
+    margin-left: 13.5rem;
+    
+   
   }
 
 }
