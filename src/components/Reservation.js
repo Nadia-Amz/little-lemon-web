@@ -5,15 +5,29 @@ import '../components/css/Style.css';
 
 
 
-const Reservation = () => {
+const Reservation = ({selectedHour, setSelectedHour}) => {
+  console.log(selectedHour);
+
+  const hours = [
+
+    { label : '14:00', value: '14:00'},
+    { label : '15:00', value: '15:00'},
+    { label : '16:00', value: '16:00'},
+    { label : '17:00', value: '17:00'},
+    { label : '18:00', value: '18:00'},
+    { label : '19:00', value: '19:00'},
+    { label : '20:00', value: '20:00'},
+    { label : '21:00', value: '21:00'},
+    { label : '22:00', value: '22:00'},
+
+  ];
 
   const [selectedOccasion, setSelectedOccasion] = useState('birthday');
   const [selectedPartysize, setSelectedPartysize] = useState('2people');
   const [selectedYear, setSelectedYear] = useState('2023');
   const [selectedMonth, setSelectedMonth] = useState('1');
   const [selectedDay, setSelectedDay] = useState('01');
-  const [selectedHour, setSelectedHour] = useState('14');
-  const [selectedMinute, setSelectedMinute] = useState('00');
+  // const [selectedHour, setSelectedHour] = useState('14:00');
 
   const handleOccasionChange = (event) => {
     setSelectedOccasion(event.target.value);
@@ -36,11 +50,8 @@ const Reservation = () => {
   };
 
   const handleHourChange = (event) => {
-    setSelectedHour(event.target.value);
-  };
-
-  const handleMinuteChange = (event) => {
-    setSelectedMinute(event.target.value);
+    console.log('New Hour:', event.target.value);
+    // setSelectedHour(event.target.value);
   };
 
   const [errorMessage, setErrorMessage] = React.useState("");
@@ -205,33 +216,16 @@ const Reservation = () => {
           </div>
 
           <div className="hour">
-            <label className="labels" htmlFor="hour">Hour :</label>
+            <label className="labels" htmlFor="hour">Time :</label>
             <div className="dropdownhour">
               <select id="hour" value={selectedHour} onChange={handleHourChange}>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-              </select>
-
-              <select id="minute" value={selectedMinute} onChange={handleMinuteChange}>
-                <option value="00">00</option>
-                <option value="01">05</option>
-                <option value="02">10</option>
-                <option value="03">15</option>
-                <option value="04">20</option>
-                <option value="05">25</option>
-                <option value="06">30</option>
-                <option value="07">35</option>
-                <option value="08">40</option>
-                <option value="09">45</option>
-                <option value="10">50</option>
-                <option value="11">55</option>
+                <option value = "Select an hour">--Select an hour--</option>
+                {hours.map((hour) => (
+                  <option key={hour.value} value={hour.value}>
+                    {hour.label}
+              </option>
+               ))}
+                
               </select>
             </div>
           </div>
