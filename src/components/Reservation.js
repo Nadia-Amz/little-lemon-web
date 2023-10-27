@@ -1,33 +1,31 @@
-import React, {  useState } from "react";
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import restaurant from "../images/restaurant.jpg";
 import '../components/css/Style.css';
 
-
-
-const Reservation = ({selectedHour, setSelectedHour}) => {
-  console.log(selectedHour);
+const Reservation = ({ availableTimes, setAvailableTimes }) => {
+  console.log(setAvailableTimes);
 
   const hours = [
 
-    { label : '14:00', value: '14:00'},
-    { label : '15:00', value: '15:00'},
-    { label : '16:00', value: '16:00'},
-    { label : '17:00', value: '17:00'},
-    { label : '18:00', value: '18:00'},
-    { label : '19:00', value: '19:00'},
-    { label : '20:00', value: '20:00'},
-    { label : '21:00', value: '21:00'},
-    { label : '22:00', value: '22:00'},
+    { label: '14:00', value: '14:00' },
+    { label: '15:00', value: '15:00' },
+    { label: '16:00', value: '16:00' },
+    { label: '17:00', value: '17:00' },
+    { label: '18:00', value: '18:00' },
+    { label: '19:00', value: '19:00' },
+    { label: '20:00', value: '20:00' },
+    { label: '21:00', value: '21:00' },
+    { label: '22:00', value: '22:00' },
 
   ];
 
   const [selectedOccasion, setSelectedOccasion] = useState('birthday');
   const [selectedPartysize, setSelectedPartysize] = useState('2people');
-  const [selectedYear, setSelectedYear] = useState('2023');
-  const [selectedMonth, setSelectedMonth] = useState('1');
-  const [selectedDay, setSelectedDay] = useState('01');
-  // const [selectedHour, setSelectedHour] = useState('14:00');
+  const [selectedDate, setSelectedDate] = useState('');
+  // const [selectedYear, setSelectedYear] = useState('2023');
+  // const [selectedMonth, setSelectedMonth] = useState('1');
+  // const [selectedDay, setSelectedDay] = useState('01');
 
   const handleOccasionChange = (event) => {
     setSelectedOccasion(event.target.value);
@@ -37,21 +35,24 @@ const Reservation = ({selectedHour, setSelectedHour}) => {
     setSelectedPartysize(event.target.value);
   };
 
-  const handleYearChange = (event) => {
-    setSelectedYear(event.target.value);
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
   };
+  // const handleYearChange = (event) => {
+  // setSelectedYear(event.target.value);
+  //  };
 
-  const handleMonthChange = (event) => {
-    setSelectedMonth(event.target.value);
-  };
+  //  const handleMonthChange = (event) => {
+  //    setSelectedMonth(event.target.value);
+  //  };
 
-  const handleDayChange = (event) => {
-    setSelectedDay(event.target.value);
-  };
+  //  const handleDayChange = (event) => {
+  //    setSelectedDay(event.target.value);
+  //  };
 
   const handleHourChange = (event) => {
     console.log('New Hour:', event.target.value);
-    // setSelectedHour(event.target.value);
+    // setAvailableTimes(event.target.value);
   };
 
   const [errorMessage, setErrorMessage] = React.useState("");
@@ -65,11 +66,11 @@ const Reservation = ({selectedHour, setSelectedHour}) => {
       navigateToConfirmationpage();
     } else {
       setErrorMessage("Oops! The form is uncompleted");
-  
+
     }
 
   };
-  
+
   const [standardChecked, setStandardChecked] = useState(false);
   const [outdoorChecked, setOutdoorChecked] = useState(false);
 
@@ -86,9 +87,9 @@ const Reservation = ({selectedHour, setSelectedHour}) => {
       setStandardChecked(!standardChecked);
     }
   };
-  
+
   const navigate = useNavigate();
-  const navigateToConfirmationpage =() =>{
+  const navigateToConfirmationpage = () => {
     navigate('/confirmationpage');
   };
 
@@ -157,7 +158,17 @@ const Reservation = ({selectedHour, setSelectedHour}) => {
           <div className="date">
             <label className="labels" htmlFor="year">Date :</label>
             <div className="dropdowndate">
-              <select id="year" value={selectedYear} onChange={handleYearChange}>
+              <input
+                type="date"
+                id="datePicker"
+                name="datePicker"
+                value={selectedDate}
+                onChange={handleDateChange}
+                placeholder="--Select a date--"
+              />            
+      
+
+              {/* <select id="year" value={selectedYear} onChange={handleYearChange}>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
@@ -211,29 +222,29 @@ const Reservation = ({selectedHour, setSelectedHour}) => {
                 <option value="29">29</option>
                 <option value="30">30</option>
                 <option value="31">31</option>
-              </select>
+              </select>  */}
             </div>
           </div>
 
           <div className="hour">
             <label className="labels" htmlFor="hour">Time :</label>
             <div className="dropdownhour">
-              <select id="hour" value={selectedHour} onChange={handleHourChange}>
-                <option value = "Select an hour">--Select an hour--</option>
+              <select id="hour" value={availableTimes} onChange={handleHourChange}>
+                <option value="Select an hour">--Select an hour--</option>
                 {hours.map((hour) => (
                   <option key={hour.value} value={hour.value}>
                     {hour.label}
-              </option>
-               ))}
-                
+                  </option>
+                ))}
+
               </select>
             </div>
           </div>
           <div className="buttonS">
             <button className="buttonR" type="submit" onClick={handleSubmit} >Submit</button>
-            
 
-           
+
+
           </div>
         </div>
       </form>

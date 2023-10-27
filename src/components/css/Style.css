@@ -369,7 +369,7 @@ a:hover {
 
 .Occasion select,
 .Party select,
-.date select,
+.date input,
 .hour select{
     padding: 5px 15px;
     border-radius: 16px;
@@ -387,6 +387,7 @@ a:hover {
 .dropdowndate{
     display: flex;
     flex-direction: row;
+    
 }
 .dropdownhour{
     display: flex;

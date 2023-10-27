@@ -9,8 +9,7 @@ import Reservation from './components/Reservation';
 
 
 function App() {
-  const [selectedHour, setSelectedHour] = useState('14:00');
-
+  const [availableTimes, setAvailableTimes] = useState('14:00');
   return (
     <Router>
       <Routes>
@@ -19,9 +18,8 @@ function App() {
       <Route path="/reservationpage" element={<Reservationpage/>}/>
       <Route path="/confirmationpage" element={<Confirmationpage/>}></Route>
       <Route path="/confirmedpage" element={<Confirmedpage/>}></Route>
+      <Route path='/reservation' element={<Reservation availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>}></Route>
       </Routes>
-      <Reservation selectedHour={selectedHour} setSelectedHour={setSelectedHour}/>
-
     </Router>
 
   );
