@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useReducer }  from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Reservationpage from './pages/Reservationpage';
@@ -7,9 +7,20 @@ import Confirmedpage from './pages/Confirmedpage';
 import Confirmationpage from './pages/Confirmationpage';
 import Reservation from './components/Reservation';
 
+function updateTimes(state, action) {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+function initializeTimes() {
+  return '14:00'; 
+}
 
 function App() {
-  const [availableTimes, setAvailableTimes] = useState('14:00');
+  const [availableTimes, setAvailableTimes] = useReducer(updateTimes, null, initializeTimes);
+  
+  
   return (
     <Router>
       <Routes>
