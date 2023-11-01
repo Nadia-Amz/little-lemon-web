@@ -7,13 +7,13 @@ import Confirmedpage from './pages/Confirmedpage';
 import Confirmationpage from './pages/Confirmationpage';
 import Reservation from './components/Reservation';
 
-function updateTimes(state, action) {
+  const updateTimes = (state, action) => {
   switch (action.type) {
     default:
       return state;
   }
 }
-function initializeTimes() {
+  const initializeTimes = () => {
   return '14:00'; 
 }
 
@@ -29,6 +29,7 @@ function App() {
       <Route path="/reservationpage" element={<Reservationpage/>}/>
       <Route path="/confirmationpage" element={<Confirmationpage/>}></Route>
       <Route path="/confirmedpage" element={<Confirmedpage/>}></Route>
+      <Route path="/reservation" element={<Reservation/>}></Route>
       <Route path='/reservation' element={<Reservation availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>}></Route>
       </Routes>
     </Router>
@@ -36,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export { updateTimes, initializeTimes, App };

@@ -88,7 +88,7 @@ const Reservation = ({ availableTimes, setAvailableTimes }) => {
       </div>
       <form className="formgroup" >
         <div className="border">
-          <h1>Reserve a table</h1>
+          <h1 data-testid="reserve-table">Reserve a table</h1>
           {errorMessage && <div className="error"> {errorMessage} </div>}
 
           <div className="options">

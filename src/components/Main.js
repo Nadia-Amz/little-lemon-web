@@ -21,7 +21,7 @@ const Main = () => {
         <main>
            <section className="text">
             <div className="paragraph">
-                <h1>Little Lemon</h1>
+                <h1 data-testid='little'>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant,
             focused on traditional recipes served with a modern twist.</p>
