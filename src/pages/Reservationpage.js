@@ -5,14 +5,14 @@ import Reservation from "../components/Reservation";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 
-const Reservationpage = () =>{
+const Reservationpage = ({ availableTimes, setAvailableTimes }) =>{
     return (
         <div className="reservation">
             <div className="header">
             <Header/>
             <Nav/>
             </div>
-            <Reservation/>
+            <Reservation availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>
             <Testimonials/>
             <Footer/>
         </div>

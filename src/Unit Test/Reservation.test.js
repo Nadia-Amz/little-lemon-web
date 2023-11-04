@@ -7,8 +7,7 @@ test('render reservation component', () => {
   render( <MemoryRouter><Reservation/></MemoryRouter>);
   const headingElement = screen.getByTestId('reserve-table');
   expect(headingElement).toBeInTheDocument();
-  screen.getByText('Reserve a table');
-  // expect(headingElement).toHaveTextContent('Reserve a table');
+  expect(headingElement).toHaveTextContent('Reserve a table');
 })
 
 

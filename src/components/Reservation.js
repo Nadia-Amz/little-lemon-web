@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import restaurant from "../images/restaurant.jpg";
 import '../components/css/Style.css';
 
-const Reservation = ({ availableTimes, setAvailableTimes }) => {
-  console.log(setAvailableTimes);
+function Reservation ({ availableTimes, setAvailableTimes }) {
 
-  const hours = [
+   const hours = [
 
     { label: '14:00', value: '14:00' },
     { label: '15:00', value: '15:00' },
@@ -39,16 +38,18 @@ const Reservation = ({ availableTimes, setAvailableTimes }) => {
  
 
   const handleHourChange = (event) => {
-    console.log('New Hour:', event.target.value);
-    // setAvailableTimes(event.target.value);
+       setAvailableTimes(event.target.value);
+       console.log('New Hour:', event.target.value);
+       console.log(availableTimes);
+
+       
   };
 
-  const [errorMessage, setErrorMessage] = React.useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if every input field is filled out
     if (standardChecked || outdoorChecked) {
       console.log("ACCEPTED");
       navigateToConfirmationpage();
@@ -160,7 +161,7 @@ const Reservation = ({ availableTimes, setAvailableTimes }) => {
           <div className="hour">
             <label className="labels" htmlFor="hour">Time :</label>
             <div className="dropdownhour">
-              <select id="hour" value={availableTimes} onChange={handleHourChange}>
+              <select id="hour" onChange={handleHourChange}>
                 <option value="Select an hour">--Select an hour--</option>
                 {hours.map((hour) => (
                   <option key={hour.value} value={hour.value}>
