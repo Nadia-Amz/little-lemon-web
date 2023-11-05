@@ -3,26 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import restaurant from "../images/restaurant.jpg";
 import '../components/css/Style.css';
 
-function Reservation ({ availableTimes, setAvailableTimes }) {
-
-   const hours = [
-
-    { label: '14:00', value: '14:00' },
-    { label: '15:00', value: '15:00' },
-    { label: '16:00', value: '16:00' },
-    { label: '17:00', value: '17:00' },
-    { label: '18:00', value: '18:00' },
-    { label: '19:00', value: '19:00' },
-    { label: '20:00', value: '20:00' },
-    { label: '21:00', value: '21:00' },
-    { label: '22:00', value: '22:00' },
-
-  ];
+function Reservation({ availableTimes, setAvailableTimes }) {
 
   const [selectedOccasion, setSelectedOccasion] = useState('birthday');
   const [selectedPartysize, setSelectedPartysize] = useState('2people');
-  const [selectedDate, setSelectedDate] = useState(null);
-  
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedHour, setSelectedHour] = useState('');
 
   const handleOccasionChange = (event) => {
     setSelectedOccasion(event.target.value);
@@ -34,15 +20,14 @@ function Reservation ({ availableTimes, setAvailableTimes }) {
 
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
+    setAvailableTimes({type : 'SELECT_DATE' , newDate : event.target.value});
+    
   };
- 
+
 
   const handleHourChange = (event) => {
-       setAvailableTimes(event.target.value);
-       console.log('New Hour:', event.target.value);
-       console.log(availableTimes);
+    setSelectedHour(event.target.value);
 
-       
   };
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -52,6 +37,7 @@ function Reservation ({ availableTimes, setAvailableTimes }) {
 
     if (standardChecked || outdoorChecked) {
       console.log("ACCEPTED");
+      setAvailableTimes({type : 'RESERVE_HOUR', date: selectedDate, hour: selectedHour});
       navigateToConfirmationpage();
     } else {
       setErrorMessage("Oops! The form is uncompleted");
@@ -153,7 +139,7 @@ function Reservation ({ availableTimes, setAvailableTimes }) {
                 name="datePicker"
                 value={selectedDate}
                 onChange={handleDateChange}
-              />            
+              />
 
             </div>
           </div>
@@ -163,11 +149,12 @@ function Reservation ({ availableTimes, setAvailableTimes }) {
             <div className="dropdownhour">
               <select id="hour" onChange={handleHourChange}>
                 <option value="Select an hour">--Select an hour--</option>
-                {hours.map((hour) => (
-                  <option key={hour.value} value={hour.value}>
-                    {hour.label}
-                  </option>
-                ))}
+                    {availableTimes.map((hour) => (
+                      <option key={hour} value={hour}>
+                        {hour}
+                      </option>
+                    ))
+                  }
 
               </select>
             </div>

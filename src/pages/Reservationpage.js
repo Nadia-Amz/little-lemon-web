@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 
 const Reservationpage = ({ availableTimes, setAvailableTimes }) =>{
+
     return (
         <div className="reservation">
             <div className="header">
