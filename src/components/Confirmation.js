@@ -39,6 +39,8 @@ const Confirmation = () => {
             }
             if(!formData.phone.trim()){
                 validationErrors.phone = "Required"
+            }else if(!/^\+?(\d{1,4}[\s-]?)?(\(\d{1,4}\)|\d{1,4})([\s-]?\d{1,4}){1,10}$/.test(formData.phone)){
+                validationErrors.phone = "Phone number is not valid"
             }
             if(!formData.email.trim()){
                 validationErrors.email = "Required"

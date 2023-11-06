@@ -74,4 +74,4 @@ function App() {
   );
 }
 
-export { updateTimes, initializeTimes, App };
+export { fetchAvailableTimes, updateTimes, initializeTimes, App };

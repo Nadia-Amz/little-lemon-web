@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { updateTimes, initializeTimes, App } from './App';
+import { fetchAvailableTimes, updateTimes, initializeTimes, App } from './App';
 
 
 test('renders learn react link', () => {
@@ -9,14 +9,51 @@ test('renders learn react link', () => {
   expect(headingElement).toHaveTextContent('Little Lemon');
 });
 
-test('updateTimes returns the same state', () => {
-  const initialState = '14:00';
-  const action = { type: 'SOME_ACTION_TYPE' };
-  const result = updateTimes(initialState, action);
-  expect(result).toBe(initialState);
+
+jest.mock('./App', () => ({
+  ...jest.requireActual('./App'), 
+  fetchAvailableTimes: jest.fn(),
+}));
+
+describe('initializeTimes', () => {
+  test('it should return available times for the current date', () => {
+    const originalDateNow = Date.now;
+    Date.now = () => new Date('2023-11-06T12:00:00Z').valueOf();
+
+    const result = initializeTimes();
+
+    expect(result).toEqual(['14:00 ', '15:00 ', '16:00 ', '17:00 ', '18:00 ', '19:00 ', '20:00 ']);
+
+    Date.now = originalDateNow;
+  });
+ });
+
+describe('updateTimes', () => {
+  test('it should select times for a new date', () => {
+    const state = [];
+    const action = { type: 'SELECT_DATE', newDate: '2023-11-05' };
+
+    const result = updateTimes(state, action);
+
+    expect(result).toEqual(['18:00 ', '19:00 ', '20:00 ', '21:00 ', '22:00 ']);
+  });
+
+  test('it should reserve an hour and update available times', () => {
+    const state = ['18:00 ', '19:00 ', '20:00 ', '21:00 ', '22:00 '];
+    const action = { type: 'RESERVE_HOUR', date: '2023-11-05', hour: '18:00 ' };
+
+    const result = updateTimes(state, action);
+
+    expect(result).toEqual(['19:00 ', '20:00 ', '21:00 ', '22:00 ']);
+  });
+
+  test('it should return the current state for an unknown action', () => {
+    const state = ['19:00 ', '20:00 '];
+    const action = { type: 'UNKNOWN_ACTION' };
+
+    const result = updateTimes(state, action);
+
+    expect(result).toEqual(['19:00 ', '20:00 ']);
+  });
 });
 
-test('initializeTimes returns the expected value', () => {
-  const result = initializeTimes();
-  expect(result).toBe('14:00');
-});
