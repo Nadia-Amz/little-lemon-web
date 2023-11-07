@@ -5,10 +5,12 @@ import '../components/css/Style.css';
 
 function Reservation({ availableTimes, setAvailableTimes }) {
 
-  const [selectedOccasion, setSelectedOccasion] = useState('birthday');
-  const [selectedPartysize, setSelectedPartysize] = useState('2people');
+  const [selectedOccasion, setSelectedOccasion] = useState('');
+  const [selectedPartysize, setSelectedPartysize] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedHour, setSelectedHour] = useState('');
+  const [standardChecked, setStandardChecked] = useState(false);
+  const [outdoorChecked, setOutdoorChecked] = useState(false);
 
   const handleOccasionChange = (event) => {
     setSelectedOccasion(event.target.value);
@@ -34,23 +36,44 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let isValid = true;
+    if (!standardChecked && !outdoorChecked) {
+      isValid = false;
+      setErrorMessage("Please select a seating option");
 
-    if (standardChecked || outdoorChecked) {
-      console.log("ACCEPTED");
-      setAvailableTimes({type : 'RESERVE_HOUR', date: selectedDate, hour: selectedHour});
-      navigateToConfirmationpage();
-    } else {
-      setErrorMessage("Oops! The form is uncompleted");
+    } 
+    if(selectedOccasion === ""){
+      isValid = false;
+      setErrorMessage("Please select an occasion");
+
+    } 
+    if(selectedPartysize ===""){
+      isValid = false;
+      setErrorMessage("Please select a party size");
+  
+    } 
+    if(selectedDate === ""){
+      isValid = false;
+      setErrorMessage("Please select a date");
+    }
+    if(selectedHour === ""){
+      isValid = false;
+      setErrorMessage("Please select a time");
 
     }
-
+    if (isValid){
+      setErrorMessage("");
+      setAvailableTimes({type : 'RESERVE_HOUR', date: selectedDate, hour: selectedHour});
+      navigateToConfirmationpage();
+    }
+    
+    
   };
 
-  const [standardChecked, setStandardChecked] = useState(false);
-  const [outdoorChecked, setOutdoorChecked] = useState(false);
+
 
   const handleStandardChange = () => {
-    setStandardChecked(!standardChecked);
+    setStandardChecked(!standardChecked);  
     if (outdoorChecked) {
       setOutdoorChecked(!outdoorChecked);
     }
@@ -108,7 +131,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
               value={selectedOccasion}
               onChange={handleOccasionChange}
             >
-
+              <option value="">--Select occasion--</option>
               <option value="birthday">Birthday</option>
               <option value="engagement">Engagement</option>
               <option value="anniversary">Anniversary</option>
@@ -121,7 +144,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
               value={selectedPartysize}
               onChange={handlePartysizeChange}
             >
-
+                <option value="Select party size">--Select party size--</option>
               <option value="2people">2 people</option>
               <option value="4people">4 people</option>
               <option value="6people">6 people</option>

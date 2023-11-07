@@ -10,86 +10,64 @@ test('render reservation component', () => {
   expect(headingElement).toHaveTextContent('Reserve a table');
 })
 
+// describe("Reservation Form Validation", () => {
+//   it("displays an error message when submitting with invalid data", () => {
+//   render( <MemoryRouter><Reservation/></MemoryRouter>);
 
+//     const occasionSelect = screen.getByLabelText("Occasion :");
+//     const partySizeSelect = screen.getByLabelText("Party size :");
+//     const dateInput = screen.getByLabelText("Date :");
+//     const timeSelect = screen.getByLabelText("Time :");
+//     const submitButton = screen.getByText("Submit");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Mock the useNavigate hook
-// jest.mock("react-router-dom", () => ({
-//   useNavigate: jest.fn(),
-// }));
-
-// describe("Reservation Component", () => {
-//   it("renders the component without errors", () => {
-//     const { getByText, getByLabelText } = render(<Reservation />);
-    
-//     // Check that the component renders successfully
-//     expect(getByText("Reserve a table")).toBeInTheDocument();
-
-//     // Example: Check for an element by its label text
-//     expect(getByLabelText("Seating options :")).toBeInTheDocument();
-//   });
-
-//   it("handles changes in seating options", () => {
-//     const { getByLabelText } = render(<Reservation />);
-
-//     // Check that the standard checkbox can be checked and unchecked
-//     const standardCheckbox = getByLabelText("Standard");
-//     fireEvent.click(standardCheckbox);
-//     expect(standardCheckbox).toBeChecked();
-//     fireEvent.click(standardCheckbox);
-//     expect(standardCheckbox).not.toBeChecked();
-
-//     // Similar checks for the outdoor checkbox
-//     const outdoorCheckbox = getByLabelText("Outdoor");
-//     fireEvent.click(outdoorCheckbox);
-//     expect(outdoorCheckbox).toBeChecked();
-//     fireEvent.click(outdoorCheckbox);
-//     expect(outdoorCheckbox).not.toBeChecked();
-//   });
-
-//   // You can write similar tests for other form elements and interactions.
-
-//   it("handles form submission with incomplete data", () => {
-//     const { getByText } = render(<Reservation />);
-//     const submitButton = getByText("Submit");
-
-//     // Click the submit button without checking any checkboxes
 //     fireEvent.click(submitButton);
 
-//     // Check that an error message is displayed
-//     expect(getByText("Oops! The form is uncompleted")).toBeInTheDocument();
+//     expect(screen.getByText("Please select a seating option")).toBeInTheDocument();
+//     expect(screen.getByText("Please select an occasion")).toBeInTheDocument();
+//     expect(screen.getByText("Please select a party size")).toBeInTheDocument();
+//     expect(screen.getByText("Please select a date")).toBeInTheDocument();
+//     expect(screen.getByText("Please select a time")).toBeInTheDocument();
 //   });
 
-//   it("handles form submission with complete data", () => {
-//     const { getByText, getByLabelText } = render(<Reservation />);
-//     const submitButton = getByText("Submit");
+//   it("displays no error message when all fields are filled correctly", () => {
+//     render(<Reservation />);
 
-//     // Check the standard checkbox
-//     const standardCheckbox = getByLabelText("Standard");
+//     const occasionSelect = screen.getByLabelText("Occasion :");
+//     const partySizeSelect = screen.getByLabelText("Party size :");
+//     const dateInput = screen.getByLabelText("Date :");
+//     const timeSelect = screen.getByLabelText("Time :");
+//     const standardCheckbox = screen.getByLabelText("Standard");
+//     const submitButton = screen.getByText("Submit");
+
+//     fireEvent.select(occasionSelect, { target: { value: "birthday" } });
+//     fireEvent.select(partySizeSelect, { target: { value: "2people" } });
+//     fireEvent.input(dateInput, { target: { value: "2023-11-15" } });
+//     fireEvent.select(timeSelect, { target: { value: "12:00 PM" } });
 //     fireEvent.click(standardCheckbox);
-
-//     // Click the submit button
 //     fireEvent.click(submitButton);
 
-//     // Check that the component navigates to the confirmation page
-//     // You need to mock the useNavigate hook for this to work
-//     expect(submitButton).toHaveProperty("navigate");
+//     expect(screen.queryByText("Please select a seating option")).toBeNull();
+//     expect(screen.queryByText("Please select an occasion")).toBeNull();
+//     expect(screen.queryByText("Please select a party size")).toBeNull();
+//     expect(screen.queryByText("Please select a date")).toBeNull();
+//     expect(screen.queryByText("Please select a time")).toBeNull();
 //   });
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
