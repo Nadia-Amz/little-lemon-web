@@ -23,7 +23,6 @@ function Reservation({ availableTimes, setAvailableTimes }) {
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
     setAvailableTimes({type : 'SELECT_DATE' , newDate : event.target.value});
-    
   };
 
 
@@ -36,7 +35,9 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     let isValid = true;
+
     if (!standardChecked && !outdoorChecked) {
       isValid = false;
       setErrorMessage("Please select a seating option");
@@ -154,7 +155,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
 
           <div className="date">
-            <label className="labels" htmlFor="year">Date :</label>
+            <label className="labels" htmlFor="datePicker" >Date :</label>
             <div className="dropdowndate">
               <input
                 type="date"
@@ -172,7 +173,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
             <div className="dropdownhour">
               <select id="hour" onChange={handleHourChange}>
                 <option value="Select an hour">--Select an hour--</option>
-                    {availableTimes.map((hour) => (
+                    {availableTimes?.map((hour) => (
                       <option key={hour} value={hour}>
                         {hour}
                       </option>
