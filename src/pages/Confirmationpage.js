@@ -6,17 +6,20 @@ import Testimonials from "../components/Testimonials";
 import Confirmation from "../components/Confirmation";
 
 
-const Confirmationpage = () =>{
+const Confirmationpage = () => {
+
     return (
+        <>
         <div className="confirmation">
             <div className="header">
-            <Header/>
-            <Nav/>
+                <Header />
+                <Nav />
             </div>
-            <Confirmation/>
-            <Testimonials/>
-            <Footer/>
+            <Confirmation />
+            <Testimonials />
+            <Footer />
         </div>
+        </>
     );
 };
 export default Confirmationpage;

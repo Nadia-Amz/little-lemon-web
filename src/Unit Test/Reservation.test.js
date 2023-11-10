@@ -1,10 +1,11 @@
 import React from "react";
-import { render, screen, fireEvent,  waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from 'react-router-dom';
 import Reservation from "../components/Reservation";
 
 test('render reservation component', () => {
-  render( <MemoryRouter><Reservation/></MemoryRouter>);
+
+  render(<MemoryRouter><Reservation /></MemoryRouter>);
   const headingElement = screen.getByTestId('reserve-table');
   expect(headingElement).toBeInTheDocument();
   expect(headingElement).toHaveTextContent('Reserve a table');
@@ -12,8 +13,9 @@ test('render reservation component', () => {
 
 
 describe("Reservation Form Validation", () => {
+
   it("displays an error message when submitting with invalid data", () => {
-  render( <MemoryRouter><Reservation/></MemoryRouter>);
+    render(<MemoryRouter><Reservation /></MemoryRouter>);
 
     const occasionSelect = screen.getByLabelText("Occasion :");
     const partySizeSelect = screen.getByLabelText("Party size :");
@@ -23,7 +25,7 @@ describe("Reservation Form Validation", () => {
 
     fireEvent.click(submitButton);
 
-    
+
     waitFor(() => {
       expect(screen.getByText("Please select a seating option")).toBeInTheDocument();
       expect(screen.getByText("Please select an occasion")).toBeInTheDocument();
@@ -31,15 +33,15 @@ describe("Reservation Form Validation", () => {
       expect(screen.getByText("Please select a date")).toBeInTheDocument();
       expect(screen.getByText("Please select a time")).toBeInTheDocument();
     });
-  
+
   });
 
   it("displays no error message when all fields are filled correctly", () => {
-    render( <MemoryRouter><Reservation/></MemoryRouter>);
+    render(<MemoryRouter><Reservation /></MemoryRouter>);
 
     const occasionSelect = screen.getByLabelText("Occasion :");
     const partySizeSelect = screen.getByLabelText("Party size :");
-    const dateInput = screen.getByLabelText("Date :"); 
+    const dateInput = screen.getByLabelText("Date :");
     const timeSelect = screen.getByLabelText("Time :");
     const standardCheckbox = screen.getByLabelText("Standard");
     const submitButton = screen.getByText("Submit");
@@ -55,12 +57,14 @@ describe("Reservation Form Validation", () => {
     expect(screen.queryByText("Please select an occasion")).toBeNull();
     expect(screen.queryByText("Please select a party size")).toBeNull();
     expect(screen.queryByText("Please select a date")).toBeNull();
-    
+
     waitFor(() => {
       expect(screen.queryByText("Please select a time")).toBeNull();
     });
+
   });
- });
+  
+});
 
 
 

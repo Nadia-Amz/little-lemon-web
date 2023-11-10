@@ -5,17 +5,20 @@ import Main from "../components/Main";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 
-const Home = () =>{
+const Home = () => {
+
     return (
+        <>
         <div className="home">
             <div className="header">
-            <Header/>
-            <Nav/>
+                <Header />
+                <Nav />
             </div>
-            <Main/>
-            <Testimonials/>
-            <Footer/>
+            <Main />
+            <Testimonials />
+            <Footer />
         </div>
+        </>
     );
 };
 export default Home;

@@ -22,7 +22,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
-    setAvailableTimes({type : 'SELECT_DATE' , newDate : event.target.value});
+    setAvailableTimes({ type: 'SELECT_DATE', newDate: event.target.value });
   };
 
 
@@ -35,46 +35,43 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     let isValid = true;
 
     if (!standardChecked && !outdoorChecked) {
       isValid = false;
       setErrorMessage("Please select a seating option");
 
-    } 
-    if(selectedOccasion === ""){
+    }
+    if (selectedOccasion === "") {
       isValid = false;
       setErrorMessage("Please select an occasion");
 
-    } 
-    if(selectedPartysize ===""){
+    }
+    if (selectedPartysize === "") {
       isValid = false;
       setErrorMessage("Please select a party size");
-  
-    } 
-    if(selectedDate === ""){
+
+    }
+    if (selectedDate === "") {
       isValid = false;
       setErrorMessage("Please select a date");
     }
-    if(selectedHour === ""){
+    if (selectedHour === "") {
       isValid = false;
       setErrorMessage("Please select a time");
 
     }
-    if (isValid){
+    if (isValid) {
       setErrorMessage("");
-      setAvailableTimes({type : 'RESERVE_HOUR', date: selectedDate, hour: selectedHour});
+      setAvailableTimes({ type: 'RESERVE_HOUR', date: selectedDate, hour: selectedHour });
       navigateToConfirmationpage();
     }
-    
-    
+
   };
 
-
-
   const handleStandardChange = () => {
-    setStandardChecked(!standardChecked);  
+    setStandardChecked(!standardChecked);
     if (outdoorChecked) {
       setOutdoorChecked(!outdoorChecked);
     }
@@ -93,6 +90,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
   };
 
   return (
+  <>
     <section className="Form">
       <div>
         <img className="restaurant" src={restaurant} alt=""></img>
@@ -145,7 +143,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
               value={selectedPartysize}
               onChange={handlePartysizeChange}
             >
-                <option value="Select party size">--Select party size--</option>
+              <option value="Select party size">--Select party size--</option>
               <option value="2people">2 people</option>
               <option value="4people">4 people</option>
               <option value="6people">6 people</option>
@@ -155,33 +153,30 @@ function Reservation({ availableTimes, setAvailableTimes }) {
 
 
           <div className="date">
-            <label className="labels" htmlFor="datePicker" >Date :</label>
-            <div className="dropdowndate">
+            <label className="labels" htmlFor="dropdowndate" >Date :</label>
               <input
                 type="date"
-                id="datePicker"
+                id="dropdowndate"
                 name="datePicker"
                 value={selectedDate}
                 onChange={handleDateChange}
               />
 
-            </div>
+           
           </div>
 
           <div className="hour">
             <label className="labels" htmlFor="hour">Time :</label>
-            <div className="dropdownhour">
               <select id="hour" onChange={handleHourChange}>
                 <option value="Select an hour">--Select an hour--</option>
-                    {availableTimes?.map((hour) => (
-                      <option key={hour} value={hour}>
-                        {hour}
-                      </option>
-                    ))
-                  }
+                {availableTimes?.map((hour) => (
+                  <option key={hour} value={hour}>
+                    {hour}
+                  </option>
+                ))
+                }
 
               </select>
-            </div>
           </div>
           <div className="buttonS">
             <button className="buttonR" type="submit" onClick={handleSubmit} >Submit</button>
@@ -189,6 +184,7 @@ function Reservation({ availableTimes, setAvailableTimes }) {
         </div>
       </form>
     </section>
+  </>
   );
 
 }; export default Reservation;

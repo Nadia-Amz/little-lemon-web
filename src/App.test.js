@@ -3,7 +3,8 @@ import { fetchAvailableTimes, updateTimes, initializeTimes, App } from './App';
 
 
 test('renders learn react link', () => {
-  render( <App/>);  
+  
+  render(<App />);
   const headingElement = screen.getByTestId('little');
   expect(headingElement).toBeInTheDocument();
   expect(headingElement).toHaveTextContent('Little Lemon');
@@ -11,7 +12,7 @@ test('renders learn react link', () => {
 
 
 jest.mock('./App', () => ({
-  ...jest.requireActual('./App'), 
+  ...jest.requireActual('./App'),
   fetchAvailableTimes: jest.fn(),
 }));
 
@@ -26,7 +27,7 @@ describe('initializeTimes', () => {
 
     Date.now = originalDateNow;
   });
- });
+});
 
 describe('updateTimes', () => {
   test('it should select times for a new date', () => {

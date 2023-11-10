@@ -6,17 +6,20 @@ import Testimonials from "../components/Testimonials";
 import Confirmed from "../components/Confirmed";
 
 
-const Confirmedpage = () =>{
+const Confirmedpage = () => {
+
     return (
+        <>
         <div className="confirmed">
             <div className="header">
-            <Header/>
-            <Nav/>
+                <Header />
+                <Nav />
             </div>
-            <Confirmed/>
-            <Testimonials/>
-            <Footer/>
+            <Confirmed />
+            <Testimonials />
+            <Footer />
         </div>
+        </>
     );
 };
 export default Confirmedpage;

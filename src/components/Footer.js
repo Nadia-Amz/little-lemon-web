@@ -3,16 +3,18 @@ import logoFooter from "../images/logoFooter.jpg";
 import '../components/css/Style.css';
 
 const Footer = () => {
+
     return (
         <footer className="footer">
 
             <div className="logo">
 
                 <img className="logo2" src={logoFooter} alt=""></img>
-                
+
             </div>
-            
+
             <section className="about">
+
                 <ul>
                     <li><a href="#home">Home</a></li>
                 </ul>
@@ -38,7 +40,9 @@ const Footer = () => {
                 </ul>
 
             </section>
+
             <section className="about">
+
                 <ul>
                     <li><a href="#address">Address</a></li>
                 </ul>
@@ -53,11 +57,12 @@ const Footer = () => {
 
 
             </section>
+
             <section className="about">
+
                 <ul>
                     <li> <a href="#facebook">Facebook</a> </li>
                 </ul>
-
                 <ul>
                     <li> <a href="#instagram">Instagram</a> </li>
                 </ul>
