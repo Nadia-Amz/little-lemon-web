@@ -583,7 +583,8 @@ button:hover {
             line-height: 2rem;
         }
         .ICON{
-            font-size:15rem;}
+            font-size:15rem;
+        }
         .iconCheck{
                 height: 17rem;
             }
@@ -651,6 +652,7 @@ button:hover {
     .bars {
         display: block; 
         background-color: azure;
+        font-size: 2.5rem;
     }
     .navElements a{
         color: black;
